@@ -5,158 +5,61 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="sass/index.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<header class="page-header" id="header">
-    <section class="page-header__logo-section">
-        <a href="index.html" class="page-header__logo-link">
-            <picture>
-                <source media="(min-width:768px)" srcset="resources/img/img-opt/index/tabl/logo-tablet.svg">
-                <img class="page-header__logo" src="resources/img/img-opt/index/mobile/header-logo.svg"  width="33" height="38" alt="logotype">
-            </picture>
+<header class="page-header">
+    <div class="page-header__wrapper">
+        <a href="" class="page-header__logo header-logo">
+            <svg class="header-logo__img" width="85" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="32.458 20.216 85.589 35.034"><path
+                    d="M36.638 46.517c-.014-3.472-.262-6.938-.356-10.409-.008-.34-.015-.681-.02-1.021l.146.364c.54 1.352 1.103 2.663 1.839 3.92.731 1.244 1.099 2.58 1.52 3.94-.159.182-.256.39-.196.596-.033.15.059.245.212.306.537.46 1.55.231 2.113-.008.242-.101.474-.221.696-.355.29-.181.744-.572.613-.977l-.072-.235c.396-1.068.598-2.179.813-3.308.23-1.206.659-2.345 1.092-3.485.043.521.088 1.044.129 1.566.174 2.147.028 4.27.008 6.422a9.962 9.962 0 00.183 2.075c.059.287.31 1.521.235 1.588-.516.476-.366 1.061.326 1.211.771.169 1.753-.088 2.333-.625 1.009-.934.531-2.396.304-3.572-.385-1.973.077-4.181.017-6.189-.069-2.26-.43-4.503-.399-6.769.023-1.831.328-3.714-.303-5.471.039-.2.08-.398.117-.6.163-.879-2.754-.414-3.212.392-.29.235-.438.519-.313.806.031.071.057.146.084.219-.552 2.699-1.321 5.313-2.207 7.93-.339 1.001-.748 1.977-1.095 2.978-.49-.933-.986-1.851-1.384-2.847-1.155-2.891-2.199-5.813-3.61-8.596.16-1.289-2.698-1.153-3.261.026-.682 1.426-.592 2.866-.369 4.393.254 1.721.298 3.411.32 5.148.039 3.347.3 6.689.351 10.04-.298.331-.389.741-.078 1.158.136.182.306.321.482.46.758.61 2.947.091 2.942-1.071zm18.196-18.372c-.089-.613-3.416.084-3.3.885.259 1.776.167 3.561.136 5.352-.031 1.722.393 3.282.615 4.971.226 1.732-.071 3.502.126 5.235.09.812.632 2.312.074 3.018-.354.447 1.237.285 1.31.275.646-.12 1.509-.331 1.938-.875.552-.697.165-2.042.045-2.827-.267-1.734-.097-3.537-.162-5.286-.061-1.676-.644-3.254-.65-4.946-.009-1.946.153-3.87-.132-5.802zm3.124 6.646c.91 2.514 4.648 1.327 6.551 1.471 3.238.239 2.272 4.607 2.313 6.641.022 1.085.995 2.889.179 3.798-.502.556-1.669.589-2.352.646-.686.057-1.853.261-2.311-.39-.836-1.194.077-3.2-.102-4.568-.102-.78-3.424-.08-3.299.884.29 2.211-1.179 5.175 2.022 5.556 2.059.244 4.372-.136 6.317-.783 1.008-.334 1.943-.792 2.731-1.509.872-.794.585-1.979.352-2.987-.569-2.458.616-5.289-.987-7.454-1.738-2.345-4.962-.657-7.212-1.297-1.161-.33-1.175-1.911-1.17-2.86.002-1.202-.098-2.302-.231-3.491-.1-.887-.021-1.787.628-2.447.119-.121.723-.283.681-.286.299-.051.572-.063.9-.076 1.304-.056 3.885.195 3.386 2.092-.226.851 3.028.363 3.266-.537 1.021-3.874-6.138-3.131-8.159-2.593-1.863.494-3.916 1.555-4.023 3.704-.052 1.027.229 2.006.274 3.022.052 1.167-.166 2.335.246 3.464zm14.455 1.87c-.053 1.799-.208 3.593-.22 5.393-.006.921.146 1.842.278 2.75.122.841.407 1.964.152 2.796-.198.646 3 .242 3.254-.587.458-1.497-.188-3.402-.341-4.918-.148-1.451-.032-2.945.072-4.42 1.708-.11 3.418-.249 5.119-.011.076 1.163.164 2.321.272 3.483.088.976.151 1.948.164 2.929.015.855.12 2.099-.185 2.913-.651 1.731 2.655 1.59 3.136.308.592-1.577.423-3.537.323-5.194-.13-2.059-.404-4.107-.47-6.166-.102-3.183-.58-6.329-.594-9.516-.007-1.661-3.338-1.099-3.331.288.012 3.04.417 6.037.571 9.068.005.061.008.121.01.185-1.64-.016-3.281.149-4.929.207.171-3.902-.515-7.771-.364-11.672.02-.492-3.264-.077-3.3.883-.143 3.771.496 7.511.383 11.281zm14.08 5.371c-.254.259-.159.414.045.506a50.736 50.736 0 01-.178 4.424c-.396.63.39.96.912.96h.082c.622 0 2.209-.293 2.289-1.148.162-1.769.211-3.535.196-5.299 1.337-1.446 2.434-3.057 3.416-4.748.64 1.248 1.247 2.505 1.676 3.861.725 2.31 1.938 4.431 2.637 6.75.459 1.521 3.754.621 3.298-.885-.701-2.319-1.856-4.462-2.638-6.75-.791-2.322-1.998-4.361-3.046-6.568.845-1.641 1.699-3.283 2.47-4.96.698-1.524 1.219-3.216 2.594-4.289.483-.376.464-.755-.216-.801-.737-.054-1.738.159-2.334.625-1.25.974-2.042 2.158-2.694 3.595a136.28 136.28 0 01-2.455 5.117l-.188.373c-.412.264-.66.642-.539 1.064-.666 1.316-1.347 2.627-2.104 3.885-.252-4.661-.803-9.317-.969-13.983-.036-1.068-3.345-.403-3.297.886.204 5.785 1.024 11.557 1.083 17.34l-.04.045zm31.534-6.232c-.177-.701-1.155-.716-1.914-.648-.01-.281-.017-.566-.029-.849-.106-2.241-.139-4.53-.329-6.765-.176-2.069-1.335-2.811-3.346-2.734-2.035.077-4.404.443-6.302 1.183-2.197.853-3.421 2.471-3.841 4.784-.464 2.539.201 5.238.313 7.789.13 2.951.056 5.909.054 8.859 0 .484 3.297.027 3.297-.884.004-2.338.037-4.676 0-7.014a45.318 45.318 0 00-.085-2.057c1.155-.499 3.106.01 4.255.118.933.089 1.826-.138 2.732-.244.017 1.946.09 3.905.17 5.851.042.997.402 2.975-.297 3.799-.368.436 1.249.288 1.31.28.668-.124 1.482-.338 1.939-.877.8-.942.384-3.192.338-4.316-.065-1.611-.086-3.223-.121-4.834.973-.13 2.038-.726 1.856-1.441zm-6.662-.162c-1.928-.046-3.828-.349-5.651.036-.086-1.051-.183-2.098-.255-3.154-.134-1.962.099-4.702 1.928-5.896.492-.318 1.413-.264 1.984-.368.819-.148 1.647-.328 2.384.16 1.017.676.768 3.08.766 4.101-.002 1.69.177 3.37.262 5.059-.466.046-.939.072-1.418.062zM51.159 24.322a.577.577 0 00.119.497l.002.114.013.282a.766.766 0 00.362.446c.325.196.737.232 1.108.196a2.677 2.677 0 001.245-.44c.072-.062.142-.122.216-.183.439-.282.818-.697.612-1.146-.424-.932-.358-1.88-.35-2.875.005-.808-.812-1.051-1.501-.989-.608.054-1.827.489-1.831 1.279-.007.836-.062 1.698.092 2.523-.04.093-.064.199-.087.296zm61.577 29.183c-1.558-.585-3.283-.615-4.851-.787-1.603-.17-3.245-.41-4.884-.563-1.637.053-3.31.027-4.972.129l-4.88.268c-6.487.289-12.999.253-19.517.107-6.517-.123-13.045-.477-19.63-.453-3.288.008-6.566.099-9.862.25-1.632.283-3.239.501-4.904.913-1.615.399-3.145.907-4.794 1.048 1.623.362 3.341.292 4.962.297 1.579.01 3.243.143 4.872.231a197.04 197.04 0 019.733-.258c6.487-.024 13.015.329 19.565.451 6.548.146 13.114.186 19.683-.11l4.907-.268c1.603-.071 3.198-.127 4.829-.067 1.628-.148 3.253-.33 4.918-.532 1.664-.238 3.22-.627 4.854-.509l.074.006.006-.055c.021-.178-.04-.323-.04-.48-.033.128-.038.265-.069.382z"/></svg>
 
         </a>
-        <h2 class="page-header__title"><span class="page-header__span-cat">cat</span> energy</h2>
-        <button class="page-header__button"><img src="resources/img/img-opt/index/mobile/btn-close.svg" alt="close" width="18" height="18"></button>
-    </section>
-    <nav class="page-header__main-menu">
-        <ul class="page-header__list">
-            <li class="page-header__item">
-                <a  class="page-header__link page-header__link--active">главная </a></li>
-            <li class="page-header__item">
-                <a href="catalog.html" class="page-header__link">каталог продукции</a>
-            </li>
-            <li class="page-header__item">
-                <a href="form.html" class="page-header__link">подбор программы</a>
-            </li>
-        </ul>
-    </nav>
+        <nav class="main-nav">
+            <button class="main-nav__toggle">Открыть меню</button>
+            <ul class="main-nav__list-main list-main">
+                <li class="list-main__item">
+                    <a href="" class="list-main__link">Каталог товаров</a>
+                </li>
+                <li class="list-main__item">
+                    <a href="" class="list-main__link">Вязание на заказ</a>
+                </li>
+                <li class="list-main__item">
+                    <a href="" class="list-main__link">
+                        <svg width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.6 17.6"><path
+                                d="M16.47 14.93l-3.415-3.415A7.67 7.67 0 0014.6 6.899c0-4.253-3.447-7.698-7.7-7.698S-.8 2.646-.8 6.899s3.445 7.7 7.698 7.7c1.734 0 3.326-.58 4.613-1.546l3.417 3.416c.203.202.418.33.772.33a1.1 1.1 0 001.1-1.1c0-.24-.061-.499-.33-.769zM1.399 6.899a5.5 5.5 0 1111 0c0 3.038-2.462 5.5-5.5 5.5s-5.5-2.461-5.5-5.5z" fill="#231f20"/></svg> Поиск по сайту</a>
+                </li>
+                <li class="list-main__item">
+                    <a href="" class="list-main__link">
+                        <svg width="20" height="19" xmlns="http://www.w3.org/2000/svg" viewBox="264.205 370.961 20.295 18.849"><path
+                                d="M283.75 378.19h-3.151l-3.407-6.814a.749.749 0 10-1.341.67l3.071 6.143h-9.138l3.072-6.143a.75.75 0 10-1.341-.67l-3.407 6.814h-3.151a.75.75 0 000 1.5h.157l.855 2.991a.74.74 0 00-.316.595c0 .396.309.71.697.739l1.656 5.795h12.697l1.656-5.795a.745.745 0 00.698-.739.736.736 0 00-.317-.596l.855-2.991h.157a.75.75 0 10-.002-1.499zm-4.181 10.121h-10.433l-1.224-4.284h12.881l-1.224 4.284zm1.653-5.785h-13.739l-.81-2.837h15.359l-.81 2.837z" fill="#231f20"/></svg>
+                        Корзина: пока пуста</a>
+                </li>
+            </ul>
+            <ul class="main-nav__list-second list-second">
+                <li class="list-second__item">
+                    <a href="" class="list-second__link">Новые поступления</a>
+                </li>
+                <li class="list-second__item">
+                    <a href="" class="list-second__link">Распродажа</a>
+                </li>
+            </ul>
+            <p class="main-nav__delivery">
+                Бесплатная доставка по России
+            </p>
+        </nav>
+        <h2 class="page-header__title">Милые штуки ручной работы для дома</h2>
+        <div class="different">
+
+        </div>
+    </div>
+
 </header>
 <main class="page-main">
-    <section class="first-screen">
-        <h3 class="first-screen__title">Функциональное питание для котов</h3>
-        <p class="first-screen__slogan">занялся собой? займись котом!</p>
-        <picture>
-            <source media="(min-width: 1440px)" srcset="resources/img/img-opt/index/desk/index-can.png">
-            <source media="(min-width: 768px)" srcset="resources/img/img-opt/index/tabl/index-can-tablet.jpg">
-            <img src="resources/img/img-opt/index/mobile/index-can-mobile.png" alt="курица" class="first-screen__picture" >
-        </picture>
-        <a href="form.html" class="first-screen__program">подобрать программу</a>
-    </section>
-    <section class="categories">
-        <ul class="categories__list">
-            <li class="categories__item">
-                <h3 class="categories__title categories__title--slim">похудение</h3>
-                <p class="categories__description">
-                    Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.
-                </p>
-                <a href="catalog.html" class="categories__link">Каталог Slim</a>
-            </li>
-            <li class="categories__item">
-                <h3 class="categories__title categories__title--mass">набор массы</h3>
-                <p class="categories__description">
-                    Заработать авторитет среди дворовых котов и даже собак?
-                    Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
-                </p>
-                <a href="catalog.html" class="categories__link">Каталог pro</a>
-            </li>
-        </ul>
-    </section>
-    <section class="advantages">
-        <h3 class="advantage__title">Как это работает</h3>
-        <ul class="advantages__list">
-            <li class="advantages__item advantages__item--vitamins">
-                Функциональное питание содержит только полезные питательные вещества.
-            </li>
-            <li class="advantages__item advantages__item--useful">
-                Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-            </li>
-            <li class="advantages__item advantages__item--eats">
-                Замените один-два приема обычной еды на наше функциональное питание.
-            </li>
-            <li class="advantages__item advantages__item--time">
-                Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
-            </li>
-        </ul>
-    </section>
-    <section class="before-after">
-        <h3 class="before-after__title">Живой пример</h3>
-        <div class="before-after__wrapper">
-            <div class="before-after__wrapper-about">
-                <p class="before-after__description">
-                    Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-                </p>
-                <div class="before-after__wrapper-example">
-                    <p class="before-after__example before-after__example--kg">5 кг</p>
-                    <p class="before-after__example before-after__example--days">60 дней</p>
-                </div>
-                <p class="before-after__money">Затраты на питание: <span class="before-after__money-span">15000 руб.</span></p>
-            </div>
-            <div class="before-after__wrapper-photo">
-                <picture>
-                    <source media="(min-width: 768px)" srcset="resources/img/img-opt/index/desk/before-desktop.png">
-                    <img class="before-after__photo-before" src="resources/img/img-opt/index/mobile/before-mobile.png" alt="before cat">
-                </picture>
-                <picture>
-                    <source media="(min-width: 768px)" srcset="resources/img/img-opt/index/desk/after-desktop.png">
-                    <img class="before-after__photo-after hidden" src="resources/img/img-opt/index/mobile/after-mobile.png" alt="after cat">
-                </picture>
-            </div>
-            <div class="before-after__wrapper-range">
-                <button class="before-after__button before-after__button--before">Было</button>
-                <input type="range" class="before-after__range">
-                <button class="before-after__button before-after__button--after">Стало</button>
 
-            </div>
-        </div>
-    </section>
-    <section class="contacts">
-        <div class="contacts__description">
-            <p class="contacts__slogan">приглашаем
-                к сотрудничеству
-                дилеров!
-            </p>
-            <div class="contacts-wrap">
-                <p class="contacts__street">
-                    ул. Большая Конюшенная, д. 19/8
-                </p>
-                <p class="contacts__city">
-                    Санкт-Петербург
-                </p>
-
-            </div>
-        </div>
-        <div class="contacts__map">
-            <!--<iframe class="contacts__real-map"-->
-                    <!--src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d840.3092993642342!2d30.323014010486798!3d59.93871966825954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya+Konyushennaya+Street%2C+19%2F8%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1566458454622!5m2!1sen!2sru" width="320" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>-->
-            <picture>
-                <source media="(min-width:1440px)" srcset="resources/img/img-opt/index/desk/map-desk.jpg">
-                <source media="(min-width:768px)" srcset="resources/img/img-opt/index/tabl/map.jpg">
-                <img src="resources/img/img-opt/index/mobile/map-moibile.jpg" alt="img-map" class="contacts__img-map">
-            </picture>
-        </div>
-    </section>
-</main >
+</main>
 <footer class="page-footer">
-    <section class="page-footer__logo">
-        <a href="index.html#header" class="page-footer__logo-link" title="На главнуб"><img src="resources/img/img-opt/index/mobile/footer-logo.svg"  alt="" width="128" height="24"></a>
-    </section>
-    <section class="page-footer__social">
-        <a href="https://vk.com/" class="page-footer__link page-footer__link--vk">
-            Vkontakte
-        </a>
-        <a href="https://www.instagram.com/" class="page-footer__link page-footer__link--insta">
-            Instagramm
-        </a>
-        <a href="https://www.facebook.com/" class="page-footer__link page-footer__link--fb">
-            Facebook
-        </a>
-    </section>
-    <section class="page-footer__academy">
-        <a href="https://htmlacademy.ru/" class="page-footer__link page-footer__link--academy">HTML Academy</a>
-    </section>
+
 </footer>
-<script src="js/main.js"></script>
 </body>
 </html>

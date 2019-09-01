@@ -10,7 +10,8 @@ let gulp = require('gulp'),
     prefixer = require('gulp-autoprefixer'),
     uglify  = require('gulp-uglify-es').default,
     babel = require('gulp-babel'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    svgSprite = require('gulp-svg-sprite');
 
 //IMAGE-OPT
 gulp.task('img-min', function() {
@@ -46,6 +47,21 @@ gulp.task('sprite', function () {
             }
         ))
         .pipe(gulp.dest('dev/resources/img/sprite'))
+});
+//SVG
+let config = {
+    mode: {
+        css: { // Activate the «css» mode
+            render: {
+                css: true // Activate CSS output (with default options)
+            }
+        }
+    }
+};
+gulp.task('svg', function () {
+    return  gulp.src('dev/resources/img/for-sprite/*.svg')
+        .pipe(svgSprite(config))
+        .pipe(gulp.dest('dev/resources/img/sprite'));
 });
 //CSS
 gulp.task('css-min', function () {
