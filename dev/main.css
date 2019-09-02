@@ -336,7 +336,11 @@ body {
   border: 0; }
 
 .page-header {
-  width: 320px; }
+  width: 320px;
+  margin: 0 auto; }
+
+.page-header__wrapper {
+  background: url("resources/img/img-opt/index/mobile/hero-mobile.jpg") no-repeat bottom 130px center; }
 
 .page-header__logo {
   display: flex;
@@ -363,7 +367,8 @@ body {
 .main-nav__list-main {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: white; }
 
 .list-main__link {
   display: flex;
@@ -380,5 +385,47 @@ body {
     position: absolute;
     left: 30px;
     fill: #d3d2d2; }
+
+.main-nav__list-second {
+  display: none; }
+
+.main-nav__delivery {
+  display: none; }
+
+.title {
+  font: 25px/30px open_sans, sans-serif;
+  font-weight: bold; }
+
+.page-header__title {
+  font-size: 27px;
+  width: 216px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 70px;
+  margin-bottom: 120px; }
+
+.different__link {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding-left: 27px;
+  color: white;
+  font: 19px/24px open_sans, sans-serif;
+  font-weight: bold;
+  min-height: 103px; }
+  .different__link svg {
+    margin-right: 30px;
+    fill: #3bb09d; }
+
+.different__link--subjects {
+  background-color: #63d1bb; }
+  .different__link--subjects svg {
+    margin-right: 40px; }
+
+.different__link--toys {
+  background-color: #56c3b2; }
 
 /*# sourceMappingURL=main.css.map */
