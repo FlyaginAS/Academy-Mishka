@@ -54,9 +54,98 @@
         <h2 class="page-header__title title">Вязание на заказ</h2>
     </div>
 </header>
-<section class="main-form">
+<main class="main-form">
+    <form class="main-form__form" action="" method="post">
+        <p class="main-form__description">
+            Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+        </p>
+        <ul class="main-form__main-list main-list">
+            <li class="main-list__item type">
+                <h3 class="main-list__title type__title">ТИП</h3>
+                <label class="main-list__label type__label">
+                    <input type="radio" class="main-list__input type__input" name="type" checked>
+                    <span class="main-list__span type__span"></span>
+                    Аксессуар для интерьера
+                </label>
+                <label class="main-list__label type__label">
+                    <input type="radio" class="main-list__input type__input" name="type">
+                    <span class="main-list__span type__span"></span>
+                    Детская игрушка
+                </label>
+            </li>
+            <li class="main-list__item color">
+                <h3 class="main-list__title color__title">ЦВЕТ</h3>
+                <label class="main-list__label color__label">
+                    <input type="checkbox" class="main-list__input color__input" name="white" checked>
+                    <span class="main-list__span color__span"></span>
+                    Белый
+                </label>
+                <label class="main-list__label color__label">
+                    <input type="checkbox" class="main-list__input color__input" name="grey" >
+                    <span class="main-list__span color__span"></span>
+                    Серый
+                </label>
+                <label class="main-list__label color__label">
+                    <input type="checkbox" class="main-list__input color__input" name="tiffany" >
+                    <span class="main-list__span color__span"></span>
+                    «Тиффани»
+                </label>
+                <label class="main-list__label color__label">
+                    <input type="checkbox" class="main-list__input color__input" name="black" >
+                    <span class="main-list__span color__span"></span>
+                    Черный
+                </label>
+                <label class="main-list__label color__label">
+                    <input type="checkbox" class="main-list__input color__input" name="pink" >
+                    <span class="main-list__span color__span"></span>
+                    Розовый
+                </label>
+                <label class="main-list__label color__label">
+                    <input type="checkbox" class="main-list__input color__input" name="orange" >
+                    <span class="main-list__span color__span"></span>
+                    Оранжевый
+                </label>
+            </li>
+            <li class="main-list__item name">
+                <h3 class="main-list__title name__title">ФИО</h3>
+                <label class="main-list__label name__label">
+                    Имя:
+                    <input type="text" class="main-list__input name__input" name="name" placeholder="Введите ваше имя*" required>
+                </label>
+                <label class="main-list__label name__label">
+                    Фамилия:
+                    <input type="text" class="main-list__input name__input" name="surname" placeholder="Укажите фамилию*" required>
+                </label>
+                <label class="main-list__label name__label">
+                    Отчество:
+                    <input type="text" class="main-list__input name__input" name="secondname" placeholder="Отчество, если желаете">
+                </label>
+            </li>
+            <li class="main-list__item tel-mail">
+                <h3 class="main-list__title tel-mail__title">ТЕЛ</h3>
+                <h3 class="main-list__title tel-mail__title">E-mail</h3>
+                <label class="main-list__label tel-mail__label">
+                    <input type="text" class="main-list__input tel-mail__input tel" name="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
+                </label>
+                <label class="main-list__label tel-mail__label">
+                    <input type="text" class="main-list__input tel-mail__input mail" name="tel" placeholder="Ваш Email*" required>
+                </label>
+            </li>
+            <li class="main-list__item whish">
+                <h3 class="main-list__title whish__title">ДОП</h3>
+                <label class="main-list__label">
+                    <textarea name="comment" id="" cols="30" rows="10" class="main-list__input whish__comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                </label>
 
-</section>
+            </li>
+        </ul>
+        <p class="main-form__needed">
+            *Поля обязательны для заполнения
+        </p>
+        <button class="main-form__submit btn">ОТПРАВИТЬ ЗАКАЗ</button>
+    </form>
+
+</main>
 <footer class="page-footer">
     <div class="page-footer__wrapper">
         <section class="page-footer__logo footer-logo">
