@@ -312,12 +312,12 @@ html {
 
 @font-face {
   font-family: 'open_sans';
-  src: url("../resources/fonts/opensans-bold-webfont.woff2") format("woff2");
+  src: url("resources/fonts/opensans-bold-webfont.woff2") format("woff2");
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: 'open_sans';
-  src: url("../resources/fonts/opensans-regular-webfont.woff2") format("woff2");
+  src: url("resources/fonts/opensans-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 body {
@@ -326,12 +326,59 @@ body {
   font-family: open_sans, sans-serif; }
 
 .visually-hidden {
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+  position: absolute;
+  overflow: hidden;
   clip: rect(0 0 0 0);
-  overflow: hidden; }
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+.page-header {
+  width: 320px; }
+
+.page-header__logo {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px; }
+
+.header-logo {
+  border-bottom: 1px solid #ececec; }
+
+.main-nav {
+  position: relative; }
+
+.main-nav__toggle {
+  position: absolute;
+  top: -51px;
+  right: 24px;
+  background-color: white;
+  border: none; }
+  .main-nav__toggle:hover {
+    cursor: pointer; }
+
+.main-nav__list-main {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.list-main__link {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 79px;
+  font: 17px/24px open_sans, sans-serif;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid #ececec;
+  padding-left: 75px; }
+  .list-main__link svg {
+    position: absolute;
+    left: 30px;
+    fill: #d3d2d2; }
 
 /*# sourceMappingURL=main.css.map */

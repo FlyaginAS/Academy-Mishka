@@ -1,0 +1,97 @@
+.page-header{
+width:320px;
+}
+.page-header__wrapper{
+}
+.page-header__logo{
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+.header-logo{
+  border-bottom: 1px solid #ececec;
+}
+.main-nav{
+position: relative;
+}
+.main-nav__toggle{
+  position:absolute;
+  top:-51px;
+  right: 24px;
+  background-color:white;
+  border:none;
+  &:hover{
+    cursor:pointer;
+  }
+  span{
+
+  }
+  svg{
+
+  }
+}
+.main-nav__list-main{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.list-main{
+
+}
+.list-main__item{
+
+}
+.list-main__link{
+  display:flex;
+  align-items: center;
+  position: relative;
+  min-height: 79px;
+  font: 17px/24px open_sans, sans-serif;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid #ececec;
+  padding-left:75px;
+  svg{
+    position: absolute;
+    left:30px;
+    fill:#d3d2d2;
+  }
+}
+.main-nav__list-second{
+
+}
+.list-second{
+
+}
+.list-second__item{
+
+}
+.list-second__link{
+
+}
+.main-nav__delivery{
+
+}
+.title{
+
+}
+.page-header__title{
+
+}
+.different{
+
+}
+.different__link{
+  svg{
+
+  }
+}
+.different__link--subjects{
+
+}
+.different__link--toys{
+
+}
