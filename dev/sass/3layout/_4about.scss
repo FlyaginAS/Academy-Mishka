@@ -1,0 +1,22 @@
+.about{
+  padding-top:5px;
+  padding-left:30px;
+  padding-right:30px;
+}
+.about__title{
+  margin-bottom:33px;
+}
+.about__description{
+  font:17px/20px open_sans, sans-serif;
+  color: black;
+  font-weight: bold;
+  min-height: 100px;
+  margin:0;
+  margin-bottom:25px;
+  padding:0;
+  border:1px solid transparent;
+  svg{
+    margin-bottom:10px;
+    fill:#63d1bb;
+  }
+}
