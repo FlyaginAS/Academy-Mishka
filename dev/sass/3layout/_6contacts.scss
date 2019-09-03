@@ -1,0 +1,40 @@
+.contacts{
+  svg{
+    display:none;
+  }
+}
+.contacts__title{
+  font:18px/30px open_sans, sans-serif;
+  font-weight: bold;
+  margin-top:40px;
+  padding-left:30px;
+}
+
+.contacts__table{
+  //padding-left:30px;
+  //border-collapse: collapse;
+  width:260px;
+  margin:0 auto;
+  margin-bottom:40px;
+  tr{
+
+  }
+  td{
+    font:15px/30px open_sans,sans-serif;
+    color:#444444;
+    vertical-align: top;
+    border:1px solid white;
+    border-spacing: 0 30px;
+    &:first-child{
+      width:70px;
+    }
+  }
+}
+
+.contacts__picture{
+
+}
+.contacts__btn{
+  margin-top:40px;
+  margin-bottom:40px;
+}

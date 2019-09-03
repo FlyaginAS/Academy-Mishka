@@ -566,4 +566,30 @@ body {
 .reviews__write {
   margin-top: 38px; }
 
+.contacts svg {
+  display: none; }
+
+.contacts__title {
+  font: 18px/30px open_sans, sans-serif;
+  font-weight: bold;
+  margin-top: 40px;
+  padding-left: 30px; }
+
+.contacts__table {
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 40px; }
+  .contacts__table td {
+    font: 15px/30px open_sans,sans-serif;
+    color: #444444;
+    vertical-align: top;
+    border: 1px solid white;
+    border-spacing: 0 30px; }
+    .contacts__table td:first-child {
+      width: 70px; }
+
+.contacts__btn {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+
 /*# sourceMappingURL=main.css.map */
