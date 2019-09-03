@@ -506,4 +506,64 @@ body {
     margin-bottom: 10px;
     fill: #63d1bb; }
 
+.reviews {
+  padding-left: 30px;
+  padding-right: 30px;
+  background: bottom no-repeat url("resources/img/img-opt/icons/zigzag-line-desktop.svg");
+  background-size: 102%;
+  padding-bottom: 50px; }
+
+.reviews__title {
+  margin-top: 40px; }
+
+.reviews__slider {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px; }
+
+.reviews__slider-list {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row nowrap; }
+
+.reviews__slider-item {
+  width: 260px;
+  flex-grow: 0;
+  flex-shrink: 0; }
+
+.reviews__description {
+  margin: 0;
+  padding: 0;
+  font: 15px/30px open_sans,sans-serif;
+  color: #444444; }
+
+.reviews__author {
+  font: 17px/30px open_sans, sans-serif;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 0; }
+
+.reviews__nik {
+  margin-top: 0; }
+
+.reviews__previous {
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid #ececec;
+  width: 130px;
+  height: 52px; }
+
+.reviews__next {
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid #ececec;
+  width: 130px;
+  height: 52px; }
+
+.reviews__write {
+  margin-top: 38px; }
+
 /*# sourceMappingURL=main.css.map */
