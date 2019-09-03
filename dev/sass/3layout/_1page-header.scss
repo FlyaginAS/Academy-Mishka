@@ -142,3 +142,97 @@ position: relative;
 .different__link--toys{
   background-color:#56c3b2;
 }
+/*TABLET***************************************************************************************/
+@media (min-width: 768px) {
+  .page-header{
+    width: 768px;
+  }
+  .page-header__wrapper{
+    width:668px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 167px);
+    background: url("resources/img/img-opt/index/desktop/hero-desktop.jpg") no-repeat bottom 0px center;
+
+  }
+  .page-header__logo{
+    grid-column: 1/2;
+    grid-row:1;
+  }
+  .header-logo{
+    &:hover{
+    }
+    &:active{
+    }
+  }
+  .main-nav{
+    grid-column: 2/5;
+
+  }
+  .main-nav__toggle{
+    display: none;
+    span{
+
+    }
+    svg{
+
+    }
+  }
+  .main-nav__list-main{
+
+  }
+  .list-main{
+    display: flex;
+  }
+  .list-main__item{
+    &:nth-child(2){
+      display: none;
+    }
+  }
+  .list-main__link{
+
+    svg{
+    }
+  }
+  .main-nav__list-second{
+  }
+  .list-second{
+  }
+  .list-second__item{
+
+  }
+  .list-second__link{
+
+  }
+  .main-nav__delivery{
+  }
+  .title{
+  }
+  .page-header__title{
+    grid-column: 1/5;
+    grid-row:2;
+    width:100%;
+    font-size:43px;
+    line-height:50px;
+    margin-top:70px;
+    margin-bottom: 370px;
+  }
+  .different{
+    grid-column: 1/5;
+    grid-row:3;
+    display: flex;
+    flex-flow:row nowrap;
+  }
+  .different__link{
+    width:50%;
+    svg{
+    }
+  }
+  .different__link--subjects{
+    svg{
+    }
+  }
+  .different__link--toys{
+  }
+
+}

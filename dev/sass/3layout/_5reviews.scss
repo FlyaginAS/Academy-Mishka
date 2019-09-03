@@ -49,8 +49,17 @@
   border: 1px solid #ececec;
   width:130px;
   height: 52px;
-  svg{
-
+  &:hover{
+    cursor: pointer;
+    svg{
+      opacity: 0.7;
+    }
+  }
+  &:active{
+    cursor: pointer;
+    svg{
+      opacity: 0.3;
+    }
   }
 }
 .reviews__next{
@@ -59,10 +68,20 @@
   border: 1px solid #ececec;
   width:130px;
   height:52px;
-  svg{
-
+  &:hover{
+    cursor: pointer;
+    svg{
+      opacity: 0.7;
+    }
+  }
+  &:active{
+    cursor: pointer;
+    svg{
+      opacity: 0.3;
+    }
   }
 }
 .reviews__write{
   margin-top:38px;
 }
+/*TABLET***************************************************************************************/

@@ -5,3 +5,13 @@
 .page-main__wrapper{
 
 }
+/*TABLET***************************************************************************************/
+@media (min-width: 768px) {
+  .page-main{
+    width:768px;
+    margin:0 auto;
+  }
+  .page-main__wrapper{
+
+  }
+}
