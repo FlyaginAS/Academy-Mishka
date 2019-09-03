@@ -28,7 +28,16 @@
 }
 .social__link{
   text-decoration: none;
-
+  &:hover{
+    svg{
+      fill:#56c3b2;
+    }
+  }
+  &:active{
+    svg{
+      opacity: 0.5;
+    }
+  }
   span{
 
   }

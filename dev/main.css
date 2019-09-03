@@ -352,6 +352,10 @@ body {
 
 .header-logo {
   border-bottom: 1px solid #ececec; }
+  .header-logo:hover {
+    opacity: 0.7; }
+  .header-logo:active {
+    opacity: 0.3; }
 
 .main-nav {
   position: relative; }
@@ -384,6 +388,13 @@ body {
   text-decoration: none;
   border-bottom: 1px solid #ececec;
   padding-left: 75px; }
+  .list-main__link:hover {
+    opacity: 0.7; }
+    .list-main__link:hover svg {
+      opacity: 1;
+      fill: #56c3b2; }
+  .list-main__link:active {
+    opacity: 0.3; }
   .list-main__link svg {
     position: absolute;
     left: 30px;
@@ -418,7 +429,13 @@ body {
   color: white;
   font: 19px/24px open_sans, sans-serif;
   font-weight: bold;
-  min-height: 103px; }
+  min-height: 103px;
+  transition-duration: 500ms; }
+  .different__link:hover {
+    transform: scale(1.1);
+    transition-duration: 500ms; }
+  .different__link:active {
+    opacity: 0.7; }
   .different__link svg {
     margin-right: 30px;
     fill: #3bb09d; }
@@ -481,6 +498,11 @@ body {
   color: #444444;
   height: 52px;
   border: 2px solid #444444; }
+  .btn:hover {
+    color: white;
+    background-color: #444444; }
+  .btn:active {
+    color: #7c7c7c; }
 
 .featured__btn {
   margin-top: 30px; }
@@ -589,8 +611,10 @@ body {
       width: 70px; }
 
 .contacts__btn {
+  margin: 0 auto;
   margin-top: 40px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  width: 260px; }
 
 .page-footer {
   background-color: #f1f1f1; }
@@ -614,6 +638,10 @@ body {
 
 .social__link {
   text-decoration: none; }
+  .social__link:hover svg {
+    fill: #56c3b2; }
+  .social__link:active svg {
+    opacity: 0.5; }
 
 .developed {
   min-height: 80px;

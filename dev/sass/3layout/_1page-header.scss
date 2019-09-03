@@ -15,6 +15,12 @@ width:320px;
 }
 .header-logo{
   border-bottom: 1px solid #ececec;
+  &:hover{
+    opacity:0.7;
+  }
+  &:active{
+    opacity:0.3;
+  }
 }
 .main-nav{
 position: relative;
@@ -57,6 +63,16 @@ position: relative;
   text-decoration: none;
   border-bottom: 1px solid #ececec;
   padding-left:75px;
+  &:hover{
+    opacity: 0.7;
+    svg{
+      opacity:1;
+      fill:#56c3b2;
+    }
+  }
+  &:active{
+    opacity: 0.3;
+  }
   svg{
     position: absolute;
     left:30px;
@@ -104,6 +120,14 @@ position: relative;
   font:19px/24px open_sans, sans-serif;
   font-weight: bold;
   min-height: 103px ;
+  transition-duration: 500ms;
+  &:hover{
+    transform: scale(1.1);
+    transition-duration: 500ms;
+  }
+  &:active{
+    opacity: 0.7;
+  }
   svg{
     margin-right: 30px;
     fill:#3bb09d;
