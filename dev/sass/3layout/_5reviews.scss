@@ -87,12 +87,14 @@
 /*TABLET***************************************************************************************/
 @media (min-width: 768px) {
   .reviews{
-    background:url("resources/img/img-opt/index/tablet/review.jpg") no-repeat top left;
+    background:url("resources/img/img-opt/index/tablet/review.jpg") no-repeat top left,
+    bottom  no-repeat url("resources/img/img-opt/icons/zigzag-line-desktop.svg");
     padding-top:45px;
     padding-left:50px;
     padding-right:50px;
     display: grid;
     grid-template-columns: repeat(4, 167px);
+    padding-bottom:130px;
   }
   .reviews__title{
     grid-column: 1/3;
