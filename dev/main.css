@@ -562,9 +562,14 @@ body {
   .featured {
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 60px;
     background-size: 102%;
     display: grid;
     grid-template-columns: repeat(4, 167px); }
+
+  .title {
+    font-size: 43px;
+    line-height: 50px; }
 
   .featured__title {
     font-size: 43px;
@@ -631,6 +636,22 @@ body {
     fill: #63d1bb; }
 
 /*TABLET***************************************************************************************/
+@media (min-width: 768px) {
+  .about {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 167px); }
+
+  .about__title {
+    grid-column: 1/5; }
+
+  .about__description {
+    grid-column: span 2;
+    font-size: 20px;
+    line-height: 22px;
+    display: grid;
+    grid-auto-rows: 40px auto; } }
 .reviews {
   padding-left: 30px;
   padding-right: 30px;
