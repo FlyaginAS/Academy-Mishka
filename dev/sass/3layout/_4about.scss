@@ -15,6 +15,12 @@
   margin-bottom:25px;
   padding:0;
   border:1px solid transparent;
+  &:nth-child(2){
+    svg{
+      margin-bottom: 30px;
+    }
+  }
+
   svg{
     margin-bottom:10px;
     fill:#63d1bb;
@@ -37,5 +43,22 @@
     line-height: 22px;
     display:grid;
     grid-auto-rows: 40px auto;
+  }
+}
+/*desktop***************************************************************************************/
+@media (min-width: 1250px) {
+  .about{
+    margin-top:50px;
+    margin-bottom: 50px;
+    padding-left:100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: repeat(6, 175px);
+  }
+  .about__title{
+    grid-column: 1/-1;
+  }
+  .about__description{
+    grid-column: span 3;
   }
 }

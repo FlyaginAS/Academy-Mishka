@@ -133,3 +133,63 @@
     align-self: end;
   }
 }
+/*desktop***************************************************************************************/
+@media (min-width: 1250px) {
+  .featured{
+    padding-left:100px;
+    padding-right: 100px;
+    grid-template-columns: repeat(6, 175px);
+    grid-auto-rows: min-content;
+    margin-top:70px;
+    justify-items: start;
+    align-items: end;
+  }
+  .title{
+  }
+  .featured__title{
+    grid-column: 2/5;
+    grid-row: 1;
+    margin:0;
+  }
+  .featured__product-week{
+    grid-column: 1/2;
+    grid-row:1;
+    text-align: center;
+    margin:0;
+    justify-self: center;
+  }
+  .featured__picture{
+    grid-column: 4/-1;
+    grid-row: 1/6;
+    z-index: -1;
+  }
+  .featured__description{
+    grid-column: 2/4;
+    grid-row: 2;
+    width:285px;
+  }
+  .featured__table{
+    width:285px;
+    grid-column: 2/4;
+    grid-row: 3;
+    tr{
+    }
+    td{
+      &:first-child{
+      }
+    }
+  }
+  .featured__price{
+    grid-column: 2/4;
+    grid-row: 4;
+    margin:0;
+    justify-self: center;
+    margin-left:-50px;
+  }
+  .btn{
+  }
+  .featured__btn{
+    grid-column: 2/4;
+    grid-row: 5;
+  }
+}
