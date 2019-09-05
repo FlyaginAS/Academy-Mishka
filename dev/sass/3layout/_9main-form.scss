@@ -1,0 +1,202 @@
+/*скрываем лишнее*/
+.different{
+  display:none;
+}
+.page-header__wrapper{
+  background:none;
+}
+.page-header{
+  //background: #f9f9f9 url("resources/img/img-opt/icons/zigzag-fill-desktop.svg") no-repeat bottom;
+  background:#f9f9f9;
+}
+.page-header__title{
+  margin:0;
+  min-height: 180px;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+/*стилизуем форму*/
+.main-form{
+  width:260px;
+  margin:0 auto;
+}
+.main-form__form{
+
+}
+.main-form__description{
+  font:13px/24px open_sans, sans-serif;
+}
+.main-form__main-list{
+
+}
+.main-list{
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+.main-list__item{
+
+}
+
+/**type*/
+.type{
+
+}
+.main-list__title{
+  position:relative;
+  font-size:17px;
+  color:#63d1bb;
+  &:after{
+    position: absolute;
+    content:'';
+    display:block;
+    width:198px;
+    height:1px ;
+    background-color:#62d1ba;
+    top:10px;
+    right:0px;
+  }
+}
+  .type__title{
+
+  }
+  .main-list__label{
+    display: flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    font-size:17px;
+    line-height: 18px;
+    font-weight: bold;
+    width:260px;
+    margin-bottom:20px;
+  }
+  .type__label{
+
+
+  }
+  .main-list__input{
+    font-family:'open_sans', sans-serif;
+    &::placeholder{
+
+      font-size:17px;
+      color:#cccccc;
+    }
+  }
+  .type__input{
+    &:focus+span{
+      border:2px solid #62d1ba;
+    }
+    &:checked+span{
+      content:'';
+      background-image: radial-gradient( #62d1ba 0%,  #62d1ba 30%,  white 30%, white 100% );
+      border:2px solid #444444;
+    }
+    &:hover+span, {
+      border:2px solid #62d1ba;
+    }
+    &:active+span{
+      border:2px solid #c7c7c7;
+    }
+  }
+  .main-list__span{
+    display:block;
+  width:40px;
+  height:40px;
+  margin-right:20px;
+  border:2px solid #444444;
+    flex-shrink: 0;
+}
+.type__span{
+  border-radius: 50%;
+
+}
+
+/*color*/
+.color{
+
+}
+.color__title{
+
+}
+.color__label{
+
+}
+.color__input{
+
+  &:hover+span {
+    border:2px solid #62d1ba;
+  }
+  &:checked+span{
+    content:'';
+    background-image: radial-gradient( #62d1ba 0%,  #62d1ba 30%,  white 30%, white 100% );
+    border:2px solid #444444;
+  }
+  &:focus+span{
+    border:2px solid #62d1ba;
+  }
+  &:active+span{
+    border:2px solid #c7c7c7;
+  }
+}
+.color__span{
+
+}
+
+/*name*/
+.name{
+
+}
+.name__title{
+
+}
+.name__label{
+
+}
+.name__input{
+
+}
+
+/*telmailk*/
+.tel-mail{
+
+}
+.tel-mail__title{
+
+}
+.tel-mail__label{
+
+}
+.tel-mail__input{
+
+}
+.tel{
+
+  svg{
+
+  }
+}
+.mail{
+
+  svg{
+
+  }
+}
+
+/*wish*/
+.whish{
+
+}
+.whish__title{
+
+}
+.whish__comment{
+
+}
+.main-form__needed{
+
+}
+.main-form__submit{
+  background-color:white;
+}
