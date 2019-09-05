@@ -236,3 +236,87 @@ position: relative;
   }
 
 }
+/*DESKTOP***************************************************************************************/
+@media (min-width: 1250px) {
+  .page-header{
+    width: 1250px;
+    background:#f9f9f9 url("resources/img/img-opt/index/desktop/hero-desktop.jpg") no-repeat bottom 0px center;
+  }
+  .page-header__wrapper{
+    width:1050px;
+    grid-template-columns: repeat(6, 175px);
+  }
+  .page-header__logo{
+    background-color:white;
+    grid-column: 1/2;
+    grid-row:1;
+  }
+  .header-logo{
+    &:hover{
+    }
+    &:active{
+    }
+  }
+  .main-nav{
+    grid-column: 2/-1;
+  }
+  .main-nav__toggle{
+    span{
+
+    }
+    svg{
+
+    }
+  }
+  .main-nav__list-main{
+
+  }
+  .list-main{
+  }
+  .list-main__item{
+    &:nth-child(2){
+      display: inherit;
+    }
+  }
+  .list-main__link{
+
+    svg{
+    }
+  }
+  .main-nav__list-second{
+    //display:inherit;
+  }
+  .list-second{
+    //display: inherit;
+  }
+  .list-second__item{
+
+  }
+  .list-second__link{
+
+  }
+  .main-nav__delivery{
+    //display: inherit;
+  }
+  .title{
+  }
+  .page-header__title{
+    grid-column: 2/-2;
+    padding:0 45px;
+  }
+  .different{
+    grid-column: 1/-1;
+  }
+  .different__link{
+
+    svg{
+    }
+  }
+  .different__link--subjects{
+    svg{
+    }
+  }
+  .different__link--toys{
+  }
+
+}

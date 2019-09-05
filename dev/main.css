@@ -493,6 +493,33 @@ body {
 
   .different__link {
     width: 50%; } }
+/*DESKTOP***************************************************************************************/
+@media (min-width: 1250px) {
+  .page-header {
+    width: 1250px;
+    background: #f9f9f9 url("resources/img/img-opt/index/desktop/hero-desktop.jpg") no-repeat bottom 0px center; }
+
+  .page-header__wrapper {
+    width: 1050px;
+    grid-template-columns: repeat(6, 175px); }
+
+  .page-header__logo {
+    background-color: white;
+    grid-column: 1/2;
+    grid-row: 1; }
+
+  .main-nav {
+    grid-column: 2/-1; }
+
+  .list-main__item:nth-child(2) {
+    display: inherit; }
+
+  .page-header__title {
+    grid-column: 2/-2;
+    padding: 0 45px; }
+
+  .different {
+    grid-column: 1/-1; } }
 .page-main {
   width: 320px;
   margin: 0 auto; }
@@ -906,7 +933,8 @@ body {
   width: 320px;
   height: 340px;
   background-color: white;
-  border: 1px solid #c7c7c7; }
+  border: 1px solid #c7c7c7;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); }
 
 .modal-cart__title {
   font: 25px/30px open_sans, sans-serif;
@@ -962,6 +990,8 @@ body {
   text-transform: uppercase;
   border: none;
   margin-top: 30px; }
+  .modal-cart__add:hover {
+    cursor: pointer; }
 
 .modal-overlay {
   position: fixed;
@@ -973,5 +1003,54 @@ body {
   background-color: white; }
 
 /*TABLET***************************************************************************************/
+@media (min-width: 768px) {
+  .page-footer {
+    padding-left: 50px;
+    padding-right: 50px; }
+
+  .page-footer__wrapper {
+    width: 100%;
+    min-height: 145px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between; }
+
+  .page-footer__logo {
+    grid-column: 1/2;
+    grid-row: 1;
+    display: block; }
+    .page-footer__logo svg:hover {
+      fill: #3bb09d; }
+    .page-footer__logo svg:active {
+      opacity: 0.3; }
+
+  .social {
+    margin-left: 60px; }
+
+  .vk {
+    margin-right: 65px; }
+
+  .fb {
+    margin-right: 65px; }
+
+  /*modal window*/
+  .modal {
+    width: 570px; }
+
+  .modal-cart__title {
+    font-size: 30px;
+    line-height: 57px;
+    width: 100%; }
+
+  .modal-cart__description {
+    font-size: 17px;
+    line-height: 30px; }
+
+  .modal-cart__span {
+    width: 112px; }
+
+  .modal-cart__add {
+    width: 336px; } }
 
 /*# sourceMappingURL=main.css.map */

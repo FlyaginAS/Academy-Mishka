@@ -92,6 +92,7 @@
   height: 340px;
   background-color: white;
   border:1px solid #c7c7c7;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
 }
 .modal-cart__title{
   font:25px/30px open_sans, sans-serif;
@@ -156,6 +157,9 @@
   text-transform: uppercase;
   border:none;
   margin-top:30px;
+  &:hover{
+    cursor: pointer;
+  }
 }
 .modal-overlay{
   position: fixed;
@@ -168,5 +172,107 @@ background-color:white;
 }
 /*TABLET***************************************************************************************/
 @media (min-width: 768px) {
+  .page-footer{
+    padding-left:50px;
+    padding-right: 50px;
 
+  }
+  .page-footer__wrapper{
+    width:100%;
+    min-height: 145px;
+    display: flex;
+    flex-flow:row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    //grid-template-columns: repeat(4, 167px);
+  }
+  .page-footer__logo{
+    grid-column: 1/2;
+    grid-row:1;
+    display:block;
+    svg{
+      &:hover{
+        fill:#3bb09d;
+      }
+      &:active{
+        opacity:0.3;
+      }
+    }
+  }
+  .footer-logo{
+
+  }
+  .page-footer__social{
+
+  }
+  .social{
+    margin-left:60px;
+  }
+  .social__link{
+    span{
+
+    }
+  }
+  .vk{
+    margin-right:65px;
+  }
+  .fb{
+    margin-right:65px;
+  }
+  .tw{
+
+  }
+  .page-footer__developed{
+
+  }
+  .developed{
+  }
+  .developed__link{
+    span{
+
+    }
+    svg{
+    }
+  }
+  /*modal window*/
+  .modal{
+    width:570px;
+  }
+  .modal-cart{
+  }
+  .modal-cart__title{
+    font-size:30px;
+    line-height: 57px;
+    width:100%;
+  }
+  .modal-cart__description{
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .modal-cart__form{
+  }
+  .modal-cart__label{
+
+  }
+  .modal-cart__input{
+
+  }
+  .modal-cart__input:checked+.modal-cart__span{
+  }
+  .modal-cart__input:focus+.modal-cart__span,
+  .modal-cart__input:active+.modal-cart__span
+  {
+  }
+  .modal-cart__input:hover+.modal-cart__span{
+  }
+  .modal-cart__input:checked:hover+.modal-cart__span{
+  }
+  .modal-cart__span{
+    width:112px;
+  }
+  .modal-cart__add{
+    width:336px;
+  }
+  .modal-overlay{
+  }
 }
