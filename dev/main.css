@@ -1446,5 +1446,120 @@ body {
     order: 1;
     margin-left: 50px;
     margin-right: auto; } }
+/*desktop************************************************************************************/
+@media all and (min-width: 1250px) {
+  .main-form {
+    width: 1250px; }
+
+  .main-form__description {
+    width: 700px;
+    margin-left: 225px;
+    padding: 0; }
+
+  .main-list__item {
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(6, 175px); }
+    .main-list__item:nth-child(2n) {
+      background-color: #f1f1f1; }
+
+  /**type*/
+  .type {
+    margin-bottom: 45px; }
+
+  .main-list__title {
+    grid-column: 1/2;
+    justify-self: center; }
+    .main-list__title:after {
+      display: none; }
+
+  .main-list__label {
+    font-size: 19px; }
+
+  .type__label {
+    grid-column: 2/4; }
+
+  /*color*/
+  .color {
+    margin-bottom: 45px;
+    min-height: 300px;
+    align-content: center; }
+
+  .color__title {
+    grid-column: 1/2; }
+
+  .color__label {
+    grid-auto-flow: row; }
+    .color__label:nth-of-type(1) {
+      grid-column: 2/3;
+      grid-row: 1; }
+    .color__label:nth-of-type(2) {
+      grid-column: 4/5;
+      grid-row: 1; }
+    .color__label:nth-of-type(3) {
+      grid-column: 6/7;
+      grid-row: 1; }
+    .color__label:nth-of-type(4) {
+      grid-column: 2/3;
+      grid-row: 2; }
+    .color__label:nth-of-type(5) {
+      grid-column: 4/5;
+      grid-row: 2; }
+    .color__label:nth-of-type(6) {
+      grid-column: 6/7;
+      grid-row: 2; }
+
+  /*name*/
+  .name__label {
+    grid-column: 2/-2;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%; }
+
+  .name__input {
+    width: 100%;
+    margin-left: 20px; }
+
+  /*telmail*/
+  .tel-mail {
+    margin-bottom: 45px;
+    min-height: 230px;
+    align-content: center; }
+
+  .tel-mail__label {
+    grid-column: 2/-2;
+    width: 100%; }
+    .tel-mail__label svg {
+      position: absolute;
+      right: 10px; }
+
+  .tel-mail__input {
+    background-color: #f1f1f1;
+    width: 100%; }
+
+  /*wish*/
+  .whish__label {
+    grid-column: 2/-2;
+    width: 100%; }
+
+  .whish__comment {
+    width: 100%; }
+
+  .wrapper {
+    display: flex;
+    width: 700px;
+    margin-left: 175px;
+    flex-flow: row nowrap;
+    align-items: baseline; }
+
+  .main-form__needed {
+    order: 2;
+    font-size: 17px;
+    margin-left: 50px; }
+
+  .main-form__submit {
+    order: 1;
+    margin-left: 50px;
+    margin-right: auto; } }
 
 /*# sourceMappingURL=main.css.map */
