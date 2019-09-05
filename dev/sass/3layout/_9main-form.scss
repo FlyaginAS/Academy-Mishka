@@ -178,6 +178,7 @@
   svg{
     position:absolute;
     right:10px;
+    fill:#c1c1c1;
   }
   &:hover, &:focus{
     svg{
@@ -199,28 +200,181 @@
   }
 }
 .tel{
-
 }
 .mail{
-
   svg{
-
   }
 }
 
 /*wish*/
 .whish{
-
 }
 .whish__title{
-
 }
 .whish__comment{
-
+  resize: none;
+  border: 2px solid #000000;
+  height:140px;
+  font-size:17px;
+  padding:10px;
+  &::placeholder{
+    font-size:17px;
+  }
 }
 .main-form__needed{
-
+  font-size:14px;
+  color:#444444;
 }
 .main-form__submit{
   background-color:white;
+  margin-top:30px;
+  margin-bottom:30px;
+  width:260px;
+}
+
+/*tablet**************************************************************************************/
+@media all and (min-width: 768px) {
+  .main-form{
+    width:768px;
+  }
+  .main-form__form{
+
+  }
+  .main-form__description{
+    padding:0 50px;
+    font-size:17px;
+    line-height: 30px;
+  }
+  .main-form__main-list{
+
+  }
+  .main-list{
+
+  }
+  .main-list__item{
+    padding:0 50px;
+    &:nth-child(2n){
+      background-color:#f1f1f1;
+    }
+    display: grid;
+    grid-template-columns: repeat(4, 167px);
+  }
+
+  /**type*/
+  .type{
+
+  }
+  .main-list__title{
+    grid-column: 1/2;
+
+    &:after{
+      display:none;
+    }
+  }
+  .type__title{
+
+  }
+  .main-list__label{
+    font-size: 19px;
+  }
+  .type__label{
+    grid-column: 2/4;
+
+  }
+  .main-list__input{
+
+    &::placeholder{
+
+
+    }
+  }
+  .type__input{
+
+  }
+  .main-list__span{
+
+  }
+  .type__span{
+
+
+  }
+
+  /*color*/
+  .color{
+
+  }
+  .color__title{
+    grid-column: 1/2;
+  }
+  .color__label{
+     grid-column: 2/3;
+    &:nth-of-type(2n){
+      grid-column: 4/5;
+    }
+  }
+  .color__input{
+
+  }
+  .color__span{
+
+  }
+
+  /*name*/
+  .name{
+
+  }
+  .name__title{
+
+  }
+  .name__label{
+    grid-column: 2/-1;
+    display:flex;
+    flex-flow:row nowrap;
+    width:100%;
+  }
+  .name__input{
+    width:100%;
+    margin-left:20px;
+  }
+
+  /*telmailk*/
+  .tel-mail{
+
+  }
+  .tel-mail__title{
+
+  }
+  .tel-mail__label{
+
+    svg{
+      position:absolute;
+      right:10px;
+    }
+
+  }
+  .tel-mail__input {
+    background-color:#f1f1f1;
+    input + svg {
+    }
+
+  }
+  .tel{
+  }
+  .mail{
+    svg{
+    }
+  }
+
+  /*wish*/
+  .whish{
+  }
+  .whish__title{
+  }
+  .whish__comment{
+  }
+  .main-form__needed{
+    font-size:17px;
+  }
+  .main-form__submit{
+  }
 }

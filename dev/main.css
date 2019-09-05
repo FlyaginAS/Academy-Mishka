@@ -1303,7 +1303,8 @@ body {
   position: relative; }
   .tel-mail__label svg {
     position: absolute;
-    right: 10px; }
+    right: 10px;
+    fill: #c1c1c1; }
   .tel-mail__label:hover svg, .tel-mail__label:focus svg {
     fill: #3bb09d; }
 
@@ -1319,7 +1320,84 @@ body {
     fill: #3bb09d; }
 
 /*wish*/
+.whish__comment {
+  resize: none;
+  border: 2px solid #000000;
+  height: 140px;
+  font-size: 17px;
+  padding: 10px; }
+  .whish__comment::placeholder {
+    font-size: 17px; }
+
+.main-form__needed {
+  font-size: 14px;
+  color: #444444; }
+
 .main-form__submit {
-  background-color: white; }
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 260px; }
+
+/*tablet**************************************************************************************/
+@media all and (min-width: 768px) {
+  .main-form {
+    width: 768px; }
+
+  .main-form__description {
+    padding: 0 50px;
+    font-size: 17px;
+    line-height: 30px; }
+
+  .main-list__item {
+    padding: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 167px); }
+    .main-list__item:nth-child(2n) {
+      background-color: #f1f1f1; }
+
+  /**type*/
+  .main-list__title {
+    grid-column: 1/2; }
+    .main-list__title:after {
+      display: none; }
+
+  .main-list__label {
+    font-size: 19px; }
+
+  .type__label {
+    grid-column: 2/4; }
+
+  /*color*/
+  .color__title {
+    grid-column: 1/2; }
+
+  .color__label {
+    grid-column: 2/3; }
+    .color__label:nth-of-type(2n) {
+      grid-column: 4/5; }
+
+  /*name*/
+  .name__label {
+    grid-column: 2/-1;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%; }
+
+  .name__input {
+    width: 100%;
+    margin-left: 20px; }
+
+  /*telmailk*/
+  .tel-mail__label svg {
+    position: absolute;
+    right: 10px; }
+
+  .tel-mail__input {
+    background-color: #f1f1f1; }
+
+  /*wish*/
+  .main-form__needed {
+    font-size: 17px; } }
 
 /*# sourceMappingURL=main.css.map */
