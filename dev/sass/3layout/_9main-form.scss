@@ -85,15 +85,16 @@
     }
   }
   .type__input{
-    &:focus+span{
-      border:2px solid #62d1ba;
-    }
     &:checked+span{
       content:'';
       background-image: radial-gradient( #62d1ba 0%,  #62d1ba 30%,  white 30%, white 100% );
       border:2px solid #444444;
     }
-    &:hover+span, {
+    &:hover+span {
+      border:2px solid #62d1ba;
+    }
+
+    &:focus+span{
       border:2px solid #62d1ba;
     }
     &:active+span{
@@ -124,15 +125,16 @@
 
 }
 .color__input{
-
+  &:checked+span{
+    content:'';
+    background:no-repeat center url("resources/img/img-opt/icons/checkout-icon.svg");
+    background-size:80%;
+    border:2px solid #444444;
+  }
   &:hover+span {
     border:2px solid #62d1ba;
   }
-  &:checked+span{
-    content:'';
-    background-image: radial-gradient( #62d1ba 0%,  #62d1ba 30%,  white 30%, white 100% );
-    border:2px solid #444444;
-  }
+
   &:focus+span{
     border:2px solid #62d1ba;
   }
@@ -152,10 +154,14 @@
 
 }
 .name__label{
-
+  display: flex;
+  flex-flow: row wrap;
 }
 .name__input{
-
+  width:260px;
+  line-height: 40px;
+  border:none;
+  border-bottom: 2px solid #000000;
 }
 
 /*telmailk*/
@@ -166,16 +172,34 @@
 
 }
 .tel-mail__label{
-
+  display: flex;
+  flex-flow: row wrap;
+  position:relative;
+  svg{
+    position:absolute;
+    right:10px;
+  }
+  &:hover, &:focus{
+    svg{
+      fill:#3bb09d;
+    }
+  }
 }
-.tel-mail__input{
-
+.tel-mail__input {
+  width: 260px;
+  line-height: 40px;
+  border: none;
+  border-bottom: 2px solid #000000;
+  input + svg {
+    position: absolute;
+    right: 10px;
+  }
+   &:focus+ svg {
+      fill: #3bb09d;
+  }
 }
 .tel{
 
-  svg{
-
-  }
 }
 .mail{
 
