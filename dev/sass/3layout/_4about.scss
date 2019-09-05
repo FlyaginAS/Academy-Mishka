@@ -56,9 +56,10 @@
     grid-template-columns: repeat(6, 175px);
   }
   .about__title{
-    grid-column: 1/-1;
+    grid-column: 2/-1;
   }
   .about__description{
     grid-column: span 3;
+    margin-left:180px;
   }
 }

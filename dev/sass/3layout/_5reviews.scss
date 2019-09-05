@@ -144,3 +144,47 @@
 
   }
 }
+/*desktop***************************************************************************************/
+@media (min-width: 1250px) {
+  .reviews{
+    background:url("resources/img/img-opt/index/desktop/review.jpg") no-repeat top left  50px,
+    bottom  no-repeat url("resources/img/img-opt/icons/zigzag-line-desktop.svg");
+    grid-template-columns: repeat(6, 175px);
+    padding-left:100px;
+    padding-right: 100px;
+    padding-bottom:180px;
+  }
+  .reviews__title{
+    grid-column: 2/-2;
+    grid-row:1;
+  }
+  .reviews__slider{
+    grid-column: 2/-1;
+  }
+  .reviews__slider-list{
+
+  }
+  .reviews__slider-item{
+  }
+  .reviews__description{
+
+    width:770px;
+  }
+  .reviews__author{
+  }
+  .reviews__nik{
+  }
+  .reviews__previous{
+    grid-column: -2/-1;
+    grid-row:2;
+    margin-bottom: 30px;
+  }
+  .reviews__next{
+    grid-column: -2/-1;
+    grid-row:2;
+    margin-bottom:30px;
+  }
+  .reviews__write{
+    grid-column: -2/-1;
+  }
+}
