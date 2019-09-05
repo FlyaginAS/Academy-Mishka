@@ -162,6 +162,9 @@
   line-height: 40px;
   border:none;
   border-bottom: 2px solid #000000;
+  &:hover,&:focus{
+    border-bottom: 2px solid #62d1ba;
+  }
 }
 
 /*telmailk*/
@@ -191,6 +194,9 @@
   line-height: 40px;
   border: none;
   border-bottom: 2px solid #000000;
+  &:hover,&:focus{
+    border-bottom: 2px solid #62d1ba;
+  }
   input + svg {
     position: absolute;
     right: 10px;
@@ -217,6 +223,9 @@
   height:140px;
   font-size:17px;
   padding:10px;
+  &:hover,&:focus{
+    border: 2px solid #62d1ba;
+  }
   &::placeholder{
     font-size:17px;
   }
@@ -244,6 +253,8 @@
     padding:0 50px;
     font-size:17px;
     line-height: 30px;
+    margin-bottom: 55px;
+    margin-top:55px;
   }
   .main-form__main-list{
 
@@ -262,7 +273,7 @@
 
   /**type*/
   .type{
-
+    margin-bottom: 45px;
   }
   .main-list__title{
     grid-column: 1/2;
@@ -301,7 +312,9 @@
 
   /*color*/
   .color{
-
+    margin-bottom: 45px;
+    min-height: 300px;
+    align-content: center;
   }
   .color__title{
     grid-column: 1/2;
@@ -321,7 +334,7 @@
 
   /*name*/
   .name{
-
+    margin-bottom: 45px;
   }
   .name__title{
 
@@ -337,15 +350,18 @@
     margin-left:20px;
   }
 
-  /*telmailk*/
+  /*telmail*/
   .tel-mail{
-
+    margin-bottom: 45px;
+    min-height: 230px;
+    align-content: center;
   }
   .tel-mail__title{
 
   }
   .tel-mail__label{
-
+    grid-column: 2/-1;
+    width:100%;
     svg{
       position:absolute;
       right:10px;
@@ -354,6 +370,7 @@
   }
   .tel-mail__input {
     background-color:#f1f1f1;
+    width:100%;
     input + svg {
     }
 
@@ -370,11 +387,26 @@
   }
   .whish__title{
   }
+  .whish__label{
+    grid-column: 2/-1;
+    width:100%;
+  }
   .whish__comment{
+    width:100%;
+  }
+  .wrapper{
+    display: flex;
+    flex-flow:row nowrap;
+    align-items: baseline;
   }
   .main-form__needed{
+    order:2;
     font-size:17px;
+    margin-left:50px;
   }
   .main-form__submit{
+    order:1;
+    margin-left:50px;
+    margin-right:auto;
   }
 }

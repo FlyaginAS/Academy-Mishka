@@ -1295,6 +1295,8 @@ body {
   line-height: 40px;
   border: none;
   border-bottom: 2px solid #000000; }
+  .name__input:hover, .name__input:focus {
+    border-bottom: 2px solid #62d1ba; }
 
 /*telmailk*/
 .tel-mail__label {
@@ -1313,6 +1315,8 @@ body {
   line-height: 40px;
   border: none;
   border-bottom: 2px solid #000000; }
+  .tel-mail__input:hover, .tel-mail__input:focus {
+    border-bottom: 2px solid #62d1ba; }
   .tel-mail__input input + svg {
     position: absolute;
     right: 10px; }
@@ -1326,6 +1330,8 @@ body {
   height: 140px;
   font-size: 17px;
   padding: 10px; }
+  .whish__comment:hover, .whish__comment:focus {
+    border: 2px solid #62d1ba; }
   .whish__comment::placeholder {
     font-size: 17px; }
 
@@ -1347,7 +1353,9 @@ body {
   .main-form__description {
     padding: 0 50px;
     font-size: 17px;
-    line-height: 30px; }
+    line-height: 30px;
+    margin-bottom: 55px;
+    margin-top: 55px; }
 
   .main-list__item {
     padding: 0 50px;
@@ -1357,6 +1365,9 @@ body {
       background-color: #f1f1f1; }
 
   /**type*/
+  .type {
+    margin-bottom: 45px; }
+
   .main-list__title {
     grid-column: 1/2; }
     .main-list__title:after {
@@ -1369,6 +1380,11 @@ body {
     grid-column: 2/4; }
 
   /*color*/
+  .color {
+    margin-bottom: 45px;
+    min-height: 300px;
+    align-content: center; }
+
   .color__title {
     grid-column: 1/2; }
 
@@ -1378,6 +1394,9 @@ body {
       grid-column: 4/5; }
 
   /*name*/
+  .name {
+    margin-bottom: 45px; }
+
   .name__label {
     grid-column: 2/-1;
     display: flex;
@@ -1388,16 +1407,44 @@ body {
     width: 100%;
     margin-left: 20px; }
 
-  /*telmailk*/
-  .tel-mail__label svg {
-    position: absolute;
-    right: 10px; }
+  /*telmail*/
+  .tel-mail {
+    margin-bottom: 45px;
+    min-height: 230px;
+    align-content: center; }
+
+  .tel-mail__label {
+    grid-column: 2/-1;
+    width: 100%; }
+    .tel-mail__label svg {
+      position: absolute;
+      right: 10px; }
 
   .tel-mail__input {
-    background-color: #f1f1f1; }
+    background-color: #f1f1f1;
+    width: 100%; }
 
   /*wish*/
+  .whish__label {
+    grid-column: 2/-1;
+    width: 100%; }
+
+  .whish__comment {
+    width: 100%; }
+
+  .wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline; }
+
   .main-form__needed {
-    font-size: 17px; } }
+    order: 2;
+    font-size: 17px;
+    margin-left: 50px; }
+
+  .main-form__submit {
+    order: 1;
+    margin-left: 50px;
+    margin-right: auto; } }
 
 /*# sourceMappingURL=main.css.map */
