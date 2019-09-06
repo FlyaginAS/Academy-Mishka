@@ -1189,16 +1189,16 @@ body {
   .modal-cart__add {
     width: 336px; } }
 /*╤Б╨║╤А╤Л╨▓╨░╨╡╨╝ ╨╗╨╕╤И╨╜╨╡╨╡*/
-.different {
+.form-different {
   display: none; }
 
-.page-header__wrapper {
+.page-header__wrapper-form {
   background: none; }
 
-.page-header {
+.page-header-form {
   background: #f9f9f9; }
 
-.page-header__title {
+.page-header__title-form {
   margin: 0;
   min-height: 180px;
   width: 100%;
@@ -1585,7 +1585,7 @@ body {
   .main-catalog__wrapper {
     padding-left: 50px;
     padding-right: 50px; } }
-.page-header__title {
+.page-header__title-catalog {
   font-size: 27px; }
 
 .catalog {
@@ -1605,7 +1605,7 @@ body {
 .item__title {
   padding-left: 28px; }
 
-.title {
+.form-title {
   font-size: 17px;
   line-height: 17px; }
 
@@ -1634,7 +1634,7 @@ body {
 
 /*tablet*********************************************************************************************/
 @media all and (min-width: 768px) {
-  .page-header__title {
+  .page-header__title-catalog {
     font-size: 43px; }
 
   .catalog {
@@ -1651,7 +1651,7 @@ body {
     grid-column: 1/3;
     grid-row: 1/4; }
 
-  .title {
+  .form-title {
     grid-column: 3/5;
     grid-row: 1;
     height: 40px;
@@ -1676,7 +1676,7 @@ body {
     font-size: 17px; } }
 /*desktop******************************************************************************************/
 @media all and (min-width: 1250px) {
-  .page-header__title {
+  .page-header__title-catalog {
     font-size: 53px; }
 
   .catalog {
@@ -1701,7 +1701,7 @@ body {
     margin: 0;
     padding: 0; }
 
-  .title {
+  .form-title {
     height: auto;
     margin: 0;
     padding: 0;
@@ -1811,17 +1811,30 @@ body {
 
   .video__title {
     grid-column: -1/-3;
-    grid-row: 1; }
+    grid-row: 1;
+    font-size: 20px;
+    line-height: 24px;
+    width: 160px;
+    margin: 0;
+    padding: 0;
+    margin-top: 90px;
+    margin-left: 40px; }
+    .video__title:before {
+      top: -50px; }
 
   .video__container {
     grid-column: 1/5;
     grid-row: 1/4; }
 
   .video__description {
+    width: 230px;
+    font-size: 15px;
+    line-height: 30px;
     grid-column: -1/-3;
     grid-row: 2; }
 
   .video__link {
+    width: 230px;
     grid-column: -1/-3;
     grid-row: 3; } }
 
