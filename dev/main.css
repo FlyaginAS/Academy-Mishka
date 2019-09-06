@@ -1722,6 +1722,30 @@ body {
     width: 260px;
     height: 75px;
     margin-left: 27px; } }
+.video__title {
+  position: relative;
+  font-size: 17px;
+  line-height: 24px;
+  padding-left: 65px; }
+  .video__title:before {
+    position: absolute;
+    content: url("resources/img/img-opt/icons/camera-icon.svg");
+    width: 32px;
+    height: 32px;
+    top: 7px;
+    left: 10px; }
+
+.video__description {
+  font-size: 13px;
+  line-height: 24px;
+  width: 190px; }
+
+.video__link {
+  font-size: 17px;
+  line-height: 17px;
+  width: 192px;
+  height: 52px; }
+
 /*tablet****************************************************************************************/
 /*desktop****************************************************************************************/
 

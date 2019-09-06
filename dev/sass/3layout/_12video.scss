@@ -2,7 +2,18 @@
 
 }
 .video__title{
-
+  position:relative;
+  font-size: 17px;
+  line-height: 24px;
+  padding-left:65px;
+  &:before{
+    position:absolute;
+    content: url("resources/img/img-opt/icons/camera-icon.svg");
+    width: 32px;
+    height: 32px;
+    top:7px;
+    left:10px;
+  }
 }
 .video__container{
 
@@ -14,10 +25,15 @@
   }
 }
 .video__description{
-
+  font-size: 13px;
+  line-height: 24px;
+  width:190px;
 }
 .video__link{
-
+  font-size:17px;
+  line-height: 17px;
+  width:192px;
+  height: 52px;
 }
 
 /*tablet****************************************************************************************/
