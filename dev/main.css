@@ -1722,31 +1722,107 @@ body {
     width: 260px;
     height: 75px;
     margin-left: 27px; } }
+.video {
+  border: 1px solid #ececec;
+  margin-bottom: 60px; }
+
 .video__title {
   position: relative;
   font-size: 17px;
   line-height: 24px;
-  padding-left: 65px; }
+  padding-left: 65px;
+  margin-left: 30px; }
   .video__title:before {
     position: absolute;
     content: url("resources/img/img-opt/icons/camera-icon.svg");
     width: 32px;
     height: 32px;
     top: 7px;
-    left: 10px; }
+    left: 0px; }
+
+.video__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 160px;
+  background: no-repeat top left url("resources/img/img-opt/catalog/mobile/video-mobile.jpg"); }
+
+.video__button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none; }
+  .video__button:hover {
+    cursor: pointer; }
+  .video__button svg {
+    width: 101px;
+    height: 77px; }
 
 .video__description {
+  margin-left: 30px;
   font-size: 13px;
   line-height: 24px;
   width: 190px; }
 
 .video__link {
+  margin-left: 30px;
   font-size: 17px;
   line-height: 17px;
   width: 192px;
-  height: 52px; }
+  height: 52px;
+  margin-top: 20px;
+  margin-bottom: 30px; }
 
 /*tablet****************************************************************************************/
+@media all and (min-width: 768px) {
+  .video {
+    display: grid;
+    grid-column: 1; }
+
+  .video__title {
+    grid-row: 2;
+    grid-column: 1;
+    width: 100%;
+    margin-left: 40px; }
+    .video__title:before {
+      top: -5px; }
+
+  .video__container {
+    grid-row: 1;
+    width: 668px;
+    height: 455px;
+    background: no-repeat top left url("resources/img/img-opt/catalog/tablet/video-tablet.jpg"); }
+
+  .video__description {
+    grid-row: 3;
+    margin-left: 40px;
+    width: 585px; }
+
+  .video__link {
+    grid-row: 4;
+    width: 590px;
+    margin-left: 40px; } }
 /*desktop****************************************************************************************/
+@media all and (min-width: 1250px) {
+  .video {
+    grid-template-columns: repeat(6, 175px);
+    background: no-repeat top left url("resources/img/img-opt/catalog/desktop/video-desktop.jpg"); }
+
+  .video__title {
+    grid-column: -1/-3;
+    grid-row: 1; }
+
+  .video__container {
+    grid-column: 1/5;
+    grid-row: 1/4; }
+
+  .video__description {
+    grid-column: -1/-3;
+    grid-row: 2; }
+
+  .video__link {
+    grid-column: -1/-3;
+    grid-row: 3; } }
 
 /*# sourceMappingURL=main.css.map */
