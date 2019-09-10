@@ -10,7 +10,8 @@ let gulp = require('gulp'),
     sass= require('gulp-sass'),
     postcss= require('gulp-postcss'),
     minify = require('gulp-csso'),
-    autoprefixer = require('gulp-autoprefixer'),
+    autoprefixer = require('autoprefixer'),
+
     /*IMG-OPT PLUGINS*/
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
@@ -19,6 +20,7 @@ let gulp = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     svgstore = require('gulp-svgstore'),
     webp=require('gulp-webp'),
+
     //JS PLUGINS
     uglify  = require('gulp-uglify-es').default,
     babel = require('gulp-babel');
@@ -26,7 +28,7 @@ let gulp = require('gulp'),
 
 //CSS************************************************************************************
 gulp.task('css-min', function () {
-    return gulp.src('dev/sass/main.css')
+    return gulp.src('dev/main.css')
         .pipe(plumber())
         //.pipe(sass())
         .pipe(postcss([
@@ -34,7 +36,7 @@ gulp.task('css-min', function () {
         ]))
         .pipe(minify())
         .pipe(rename('main.min.css'))
-        .pipe(gulp.dest('dev/sass/'))
+        .pipe(gulp.dest('dev/'))
 });
 
 //IMAGE-OPT***************************************************************************
@@ -63,12 +65,12 @@ gulp.task('clear-cache', function (done) {
 
 //SPRITE SVG**********************************************************************************
 gulp.task('sprite-svg', function () {
-    return gulp.src('dev/resources/for-sprite/*.svg')
+    return gulp.src('dev/resources/img/for-sprite/*.svg')
         .pipe(svgstore({
             inlineSvg: true
         }))
         .pipe(rename('sprite.svg'))
-        .pipe(gulp.dest('dev/resources/sprite'));
+        .pipe(gulp.dest('dev/resources/img/sprite'));
 });
 //WEBP***********************************************************************************
 gulp.task('webp', function () {
