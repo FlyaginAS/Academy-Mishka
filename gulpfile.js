@@ -5,6 +5,7 @@ let gulp = require('gulp'),
     rename = require('gulp-rename'),
     plumber=require('gulp-plumber'),
     del = require("del"),
+    server = require('browser-sync').create(),
 
     /*CSS PLUGINS*/
     sass= require('gulp-sass'),
@@ -72,6 +73,18 @@ gulp.task('sprite-svg', function () {
         .pipe(rename('sprite.svg'))
         .pipe(gulp.dest('dev/resources/img/sprite'));
 });
+//SPRITE PNG*******************************************************************************
+//  spritesmith = require('gulp.spritesmith');
+gulp.task('sprite', function () {
+    return gulp.src('dev/resources/img/img-opt/*.*')
+        .pipe(spritesmith(
+            {
+                imgName: 'sprite.png',
+                cssName: 'sprite.css'
+            }
+        ))
+        .pipe(gulp.dest('dev/resources/img/sprite'))
+});
 //WEBP***********************************************************************************
 gulp.task('webp', function () {
     return gulp.src('dev/resources/img/img-opt/*.{png, jpg}')
@@ -101,32 +114,8 @@ gulp.task("clean", function () {
 
 
 
-//  spritesmith = require('gulp.spritesmith');
-gulp.task('sprite', function () {
-    return gulp.src('dev/resources/img/img-opt/*.*')
-        .pipe(spritesmith(
-            {
-                imgName: 'sprite.png',
-                cssName: 'sprite.css'
-            }
-        ))
-        .pipe(gulp.dest('dev/resources/img/sprite'))
-});
-//SVG
-let config = {
-    mode: {
-        css: { // Activate the «css» mode
-            render: {
-                css: true // Activate CSS output (with default options)
-            }
-        }
-    }
-};
-gulp.task('svg', function () {
-    return  gulp.src('dev/resources/img/for-sprite/*.svg')
-        .pipe(svgSprite(config))
-        .pipe(gulp.dest('dev/resources/img/sprite'));
-});
+
+
 
 //JS
 gulp.task('js-min', function () {
