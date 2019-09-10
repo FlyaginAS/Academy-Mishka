@@ -4,6 +4,8 @@ let gulp = require('gulp'),
     cache = require('gulp-cache'),
     rename = require('gulp-rename'),
     plumber=require('gulp-plumber'),
+    del = require("del"),
+
     /*CSS PLUGINS*/
     sass= require('gulp-sass'),
     postcss= require('gulp-postcss'),
@@ -16,14 +18,8 @@ let gulp = require('gulp'),
     spritesmith = require('gulp.spritesmith'),
     svgSprite = require('gulp-svg-sprite'),
     svgstore = require('gulp-svgstore'),
-    /*WEBP PLUGINS*/
     webp=require('gulp-webp'),
-
-
-
-
-
-
+    //JS PLUGINS
     uglify  = require('gulp-uglify-es').default,
     babel = require('gulp-babel');
 
@@ -65,7 +61,7 @@ gulp.task('clear-cache', function (done) {
     return cache.clearAll(done);
 });
 
-//SPRITE**********************************************************************************
+//SPRITE SVG**********************************************************************************
 gulp.task('sprite-svg', function () {
     return gulp.src('dev/resources/for-sprite/*.svg')
         .pipe(svgstore({
@@ -75,8 +71,26 @@ gulp.task('sprite-svg', function () {
         .pipe(gulp.dest('dev/resources/sprite'));
 });
 //WEBP***********************************************************************************
-
-
+gulp.task('webp', function () {
+    return gulp.src('dev/resources/img/img-opt/*.{png, jpg}')
+        .pipe(webp({quality: 90}))
+        .pipe(gulp.dest('dev/resources/img/webp'));
+});
+//COPY***********************************************************************************
+gulp.task('copy', function(){
+    return gulp.src([
+        "source/fonts/**/*.{woff,woff2}",
+        "source/img/**",
+        "source/js/**"
+    ], {
+        base: 'source'
+    })
+        .pipe(gulp.dest('build'));
+});
+//DEL****************************************************************************************
+gulp.task("clean", function () {
+    return del("build");
+});
 
 
 
