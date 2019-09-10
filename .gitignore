@@ -93,7 +93,13 @@ typings/
 
 ### Example user template template
 ### Example user template
-
+.DS_Store
+*.ai
+*.pdf
+*.psd
+*.sublime*
+build/
+Thumbs.db
 # IntelliJ project files
 .idea
 *.iml

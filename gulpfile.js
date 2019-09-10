@@ -1,19 +1,47 @@
 'use strict';
+/*COMMON PLAGINS*/
 let gulp = require('gulp'),
+    cache = require('gulp-cache'),
+    rename = require('gulp-rename'),
+    plumber=require('gulp-plumber'),
+    /*CSS PLUGINS*/
+    sass= require('gulp-sass'),
+    postcss= require('gulp-postcss'),
+    minify = require('gulp-csso'),
+    autoprefixer = require('gulp-autoprefixer'),
+    /*IMG-OPT PLUGINS*/
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     imgCompress = require('imagemin-jpeg-recompress'),
-    cache = require('gulp-cache'),
     spritesmith = require('gulp.spritesmith'),
-    sass= require('gulp-sass'),
-    minimize = require('gulp-clean-css'),
-    prefixer = require('gulp-autoprefixer'),
-    uglify  = require('gulp-uglify-es').default,
-    babel = require('gulp-babel'),
-    rename = require('gulp-rename'),
-    svgSprite = require('gulp-svg-sprite');
+    svgSprite = require('gulp-svg-sprite'),
+    svgstore = require('gulp-svgstore'),
+    /*WEBP PLUGINS*/
+    webp=require('gulp-webp'),
 
-//IMAGE-OPT
+
+
+
+
+
+    uglify  = require('gulp-uglify-es').default,
+    babel = require('gulp-babel');
+
+
+//CSS************************************************************************************
+gulp.task('css-min', function () {
+    return gulp.src('dev/sass/main.css')
+        .pipe(plumber())
+        //.pipe(sass())
+        .pipe(postcss([
+            autoprefixer()
+        ]))
+        .pipe(minify())
+        .pipe(rename('main.min.css'))
+        .pipe(gulp.dest('dev/sass/'))
+});
+
+//IMAGE-OPT***************************************************************************
 gulp.task('img-min', function() {
     return gulp.src('dev/resources/img/img-orig/**/*.*')
         .pipe(cache(imagemin([
@@ -21,8 +49,8 @@ gulp.task('img-min', function() {
             imagemin.jpegtran({progressive: true}),
             imgCompress({
                 loops: 5,
-                min: 70,
-                max: 80,
+                min: 67,
+                max: 73,
                 quality:'medium'
             }),
             imagemin.svgo(),
@@ -36,7 +64,27 @@ gulp.task('img-min', function() {
 gulp.task('clear-cache', function (done) {
     return cache.clearAll(done);
 });
-//SPRITE
+
+//SPRITE**********************************************************************************
+gulp.task('sprite-svg', function () {
+    return gulp.src('dev/resources/for-sprite/*.svg')
+        .pipe(svgstore({
+            inlineSvg: true
+        }))
+        .pipe(rename('sprite.svg'))
+        .pipe(gulp.dest('dev/resources/sprite'));
+});
+//WEBP***********************************************************************************
+
+
+
+
+
+
+
+
+
+
 //  spritesmith = require('gulp.spritesmith');
 gulp.task('sprite', function () {
     return gulp.src('dev/resources/img/img-opt/*.*')
@@ -63,14 +111,7 @@ gulp.task('svg', function () {
         .pipe(svgSprite(config))
         .pipe(gulp.dest('dev/resources/img/sprite'));
 });
-//CSS
-gulp.task('css-min', function () {
-    return gulp.src('dev/sass/index.css')
-        .pipe(prefixer())
-        .pipe(minimize())
-        .pipe(rename('min.css'))
-        .pipe(gulp.dest('dev'));
-});
+
 //JS
 gulp.task('js-min', function () {
     return gulp.src('dev/js/main.js')
@@ -107,3 +148,7 @@ gulp.task('js-min', function () {
 // gulp.task('build', function () {
 //     return gulp.series()
 // })
+
+/*************************************************************************************************/
+//ОТ HTMLACADEMY
+/*************************************************************************************************/
