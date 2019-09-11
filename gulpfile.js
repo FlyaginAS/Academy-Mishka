@@ -36,7 +36,8 @@ gulp.task('html', function () {
         .pipe(posthtml([
             include()
         ]))
-        .pipe(gulp.dest('build'));
+        .pipe(gulp.dest('build'))
+        // .pipe(server.reload());
 });
 //CSS************************************************************************************
 gulp.task('css-min', function () {
@@ -49,8 +50,8 @@ gulp.task('css-min', function () {
         .pipe(gulp.dest('build/css'))
         .pipe(minify())
         .pipe(rename('main.min.css'))
-        .pipe(gulp.dest('build/css'));
-        // .pipe(server.stream());
+        .pipe(gulp.dest('build/css'))
+        .pipe(server.stream());
 });
 
 //IMAGE-OPT***************************************************************************
@@ -128,7 +129,7 @@ gulp.task('serve', function () {
     server.init({
         server:'build/'
     });
-    gulp.watch('dev/**/*.{scss, sass}', ['css-min']);
+    gulp.watch('dev/sass/**/*.{scss, sass}', gulp.series('css-min'));
     gulp.watch('dev/*.html').on('change', server.reload);
 });
 
