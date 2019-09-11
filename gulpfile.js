@@ -127,10 +127,11 @@ gulp.task("clean", function () {
 //SERVER*********************************************************************************
 gulp.task('serve', function () {
     server.init({
-        server:'build/'
+        server:'build'
     });
     gulp.watch('dev/sass/**/*.{scss, sass}', gulp.series('css-min'));
-    gulp.watch('dev/*.html').on('change', server.reload);
+    gulp.watch('dev/*.html').on('change', gulp.series('html'));
+    server.watch('build/*.html').on('change', server.reload)
 });
 
 //BUILD************************************************************************************
@@ -138,6 +139,7 @@ gulp.task('build', gulp.series('clean', 'copy', 'css-min', 'sprite-svg','html'))
 
 //START***********************************************************************************
 gulp.task('start', gulp.series('build','serve'));
+
 
 
 
