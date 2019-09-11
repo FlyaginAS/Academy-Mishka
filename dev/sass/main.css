@@ -313,12 +313,12 @@ html {
 
 @font-face {
   font-family: 'open_sans';
-  src: url("resources/fonts/opensans-bold-webfont.woff2") format("woff2");
+  src: url("../resources/fonts/opensans-bold-webfont.woff2") format("woff2");
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: 'open_sans';
-  src: url("resources/fonts/opensans-regular-webfont.woff2") format("woff2");
+  src: url("../resources/fonts/opensans-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 body {
@@ -342,7 +342,7 @@ body {
   margin-bottom: 30px; }
 
 .page-header__wrapper {
-  background: url("resources/img/img-opt/index/mobile/hero-mobile.jpg") no-repeat bottom 130px center; }
+  background: url("../resources/img/img-opt/index/mobile/hero-mobile.jpg") no-repeat bottom 130px center; }
 
 .page-header__logo {
   display: flex;
@@ -459,7 +459,7 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 167px);
-    background: url("resources/img/img-opt/index/desktop/hero-desktop.jpg") no-repeat bottom 0px center; }
+    background: url("../resources/img/img-opt/index/desktop/hero-desktop.jpg") no-repeat bottom 0px center; }
 
   .page-header__logo {
     grid-column: 1/2;
@@ -498,7 +498,7 @@ body {
 @media (min-width: 1250px) {
   .page-header {
     width: 1250px;
-    background: #f9f9f9 url("resources/img/img-opt/index/desktop/hero-desktop.jpg") no-repeat bottom 0px center; }
+    background: #f9f9f9 url("../resources/img/img-opt/index/desktop/hero-desktop.jpg") no-repeat bottom 0px center; }
 
   .page-header__wrapper {
     width: 1050px;
@@ -539,7 +539,7 @@ body {
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 40px;
-  background: bottom no-repeat url("resources/img/img-opt/icons/zigzag-line-desktop.svg");
+  background: bottom no-repeat url("../resources/img/img-opt/icons/zigzag-line-desktop.svg");
   background-size: 102%; }
 
 .featured__product-week {
@@ -754,7 +754,7 @@ body {
 .reviews {
   padding-left: 30px;
   padding-right: 30px;
-  background: bottom no-repeat url("resources/img/img-opt/icons/zigzag-line-desktop.svg");
+  background: bottom no-repeat url("../resources/img/img-opt/icons/zigzag-line-desktop.svg");
   background-size: 102%;
   padding-bottom: 50px; }
 
@@ -830,7 +830,7 @@ body {
 /*TABLET***************************************************************************************/
 @media (min-width: 768px) {
   .reviews {
-    background: url("resources/img/img-opt/index/tablet/review.jpg") no-repeat top left, bottom no-repeat url("resources/img/img-opt/icons/zigzag-line-desktop.svg");
+    background: url("../resources/img/img-opt/index/tablet/review.jpg") no-repeat top left, bottom no-repeat url("../resources/img/img-opt/icons/zigzag-line-desktop.svg");
     padding-top: 45px;
     padding-left: 50px;
     padding-right: 50px;
@@ -877,7 +877,7 @@ body {
 /*desktop***************************************************************************************/
 @media (min-width: 1250px) {
   .reviews {
-    background: url("resources/img/img-opt/index/desktop/review.jpg") no-repeat top left 50px, bottom no-repeat url("resources/img/img-opt/icons/zigzag-line-desktop.svg");
+    background: url("../resources/img/img-opt/index/desktop/review.jpg") no-repeat top left 50px, bottom no-repeat url("../resources/img/img-opt/icons/zigzag-line-desktop.svg");
     grid-template-columns: repeat(6, 175px);
     padding-left: 100px;
     padding-right: 100px;
@@ -1279,7 +1279,7 @@ body {
 /*color*/
 .color__input:checked + span {
   content: '';
-  background: no-repeat center url("resources/img/img-opt/icons/checkout-icon.svg");
+  background: no-repeat center url("../resources/img/img-opt/icons/checkout-icon.svg");
   background-size: 80%;
   border: 2px solid #444444; }
 .color__input:hover + span {
@@ -1738,7 +1738,7 @@ body {
   margin-left: 30px; }
   .video__title:before {
     position: absolute;
-    content: url("resources/img/img-opt/icons/camera-icon.svg");
+    content: url("../resources/img/img-opt/icons/camera-icon.svg");
     width: 32px;
     height: 32px;
     top: 7px;
@@ -1750,7 +1750,7 @@ body {
   align-items: center;
   width: 260px;
   height: 160px;
-  background: no-repeat top left url("resources/img/img-opt/catalog/mobile/video-mobile.jpg"); }
+  background: no-repeat top left url("../resources/img/img-opt/catalog/mobile/video-mobile.jpg"); }
 
 .video__button {
   margin: 0;
@@ -1796,7 +1796,7 @@ body {
     grid-row: 1;
     width: 668px;
     height: 455px;
-    background: no-repeat top left url("resources/img/img-opt/catalog/tablet/video-tablet.jpg"); }
+    background: no-repeat top left url("../resources/img/img-opt/catalog/tablet/video-tablet.jpg"); }
 
   .video__description {
     grid-row: 3;
@@ -1811,7 +1811,7 @@ body {
 @media all and (min-width: 1250px) {
   .video {
     grid-template-columns: repeat(6, 175px);
-    background: no-repeat top left url("resources/img/img-opt/catalog/desktop/video-desktop.jpg"); }
+    background: no-repeat top left url("../resources/img/img-opt/catalog/desktop/video-desktop.jpg"); }
 
   .video__title {
     grid-column: -1/-3;

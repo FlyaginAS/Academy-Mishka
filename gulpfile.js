@@ -7,6 +7,9 @@ let gulp = require('gulp'),
     del = require("del"),
     server = require('browser-sync').create(),
 
+    /*HTML PLUGINS*/
+    posthtml=require('gulp-posthtml'),
+
     /*CSS PLUGINS*/
     sass= require('gulp-sass'),
     postcss= require('gulp-postcss'),
@@ -21,23 +24,32 @@ let gulp = require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     svgstore = require('gulp-svgstore'),
     webp=require('gulp-webp'),
+    include=require('posthtml-include'),
 
     //JS PLUGINS
     uglify  = require('gulp-uglify-es').default,
     babel = require('gulp-babel');
 
-
+//HTML************************************************************************************
+gulp.task('html', function () {
+    return gulp.src('dev/*.html')
+        .pipe(posthtml([
+            include()
+        ]))
+        .pipe(gulp.dest('build/'));
+});
 //CSS************************************************************************************
 gulp.task('css-min', function () {
-    return gulp.src('dev/main.css')
+    return gulp.src('dev/main.scss')
         .pipe(plumber())
-        //.pipe(sass())
+        .pipe(sass())
         .pipe(postcss([
             autoprefixer()
         ]))
         .pipe(minify())
         .pipe(rename('main.min.css'))
-        .pipe(gulp.dest('dev/'))
+        .pipe(gulp.dest('build/'))
+        .pipe(server.stream());
 });
 
 //IMAGE-OPT***************************************************************************
@@ -73,6 +85,7 @@ gulp.task('sprite-svg', function () {
         .pipe(rename('sprite.svg'))
         .pipe(gulp.dest('dev/resources/img/sprite'));
 });
+
 //SPRITE PNG*******************************************************************************
 //  spritesmith = require('gulp.spritesmith');
 gulp.task('sprite', function () {
@@ -85,6 +98,7 @@ gulp.task('sprite', function () {
         ))
         .pipe(gulp.dest('dev/resources/img/sprite'))
 });
+
 //WEBP***********************************************************************************
 gulp.task('webp', function () {
     return gulp.src('dev/resources/img/img-opt/*.{png, jpg}')
@@ -102,9 +116,19 @@ gulp.task('copy', function(){
     })
         .pipe(gulp.dest('build'));
 });
+
 //DEL****************************************************************************************
 gulp.task("clean", function () {
     return del("build");
+});
+
+//SERVER*********************************************************************************
+gulp.task('serve', function () {
+    server.init({
+        server:'build/'
+    });
+    gulp.watch('dev/**/*.{scss, sass}', ['css-min']);
+    gulp.watch('dev/*.html').on('change', server.reload);
 });
 
 
