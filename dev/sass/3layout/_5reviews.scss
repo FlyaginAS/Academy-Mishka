@@ -1,7 +1,7 @@
 .reviews{
   padding-left:30px;
   padding-right:30px;
-  background:bottom  no-repeat url("resources/img/img-opt/icons/zigzag-line-desktop.svg") ;
+  background:bottom  no-repeat url("../resources/img/img-opt/icons/zigzag-line-desktop.svg") ;
   background-size:102%;
   padding-bottom:50px;
 }
@@ -87,8 +87,8 @@
 /*TABLET***************************************************************************************/
 @media (min-width: 768px) {
   .reviews{
-    background:url("resources/img/img-opt/index/tablet/review.jpg") no-repeat top left,
-    bottom  no-repeat url("resources/img/img-opt/icons/zigzag-line-desktop.svg");
+    background:url("../resources/img/img-opt/index/tablet/review.jpg") no-repeat top left,
+    bottom  no-repeat url("../resources/img/img-opt/icons/zigzag-line-desktop.svg");
     padding-top:45px;
     padding-left:50px;
     padding-right:50px;
@@ -147,8 +147,8 @@
 /*desktop***************************************************************************************/
 @media (min-width: 1250px) {
   .reviews{
-    background:url("resources/img/img-opt/index/desktop/review.jpg") no-repeat top left  50px,
-    bottom  no-repeat url("resources/img/img-opt/icons/zigzag-line-desktop.svg");
+    background:url("../resources/img/img-opt/index/desktop/review.jpg") no-repeat top left  50px,
+    bottom  no-repeat url("../resources/img/img-opt/icons/zigzag-line-desktop.svg");
     grid-template-columns: repeat(6, 175px);
     padding-left:100px;
     padding-right: 100px;

@@ -127,7 +127,7 @@
 .color__input{
   &:checked+span{
     content:'';
-    background:no-repeat center url("resources/img/img-opt/icons/checkout-icon.svg");
+    background:no-repeat center url("../resources/img/img-opt/icons/checkout-icon.svg");
     background-size:80%;
     border:2px solid #444444;
   }

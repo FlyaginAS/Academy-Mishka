@@ -4,7 +4,7 @@ width:320px;
   margin-bottom:30px;
 }
 .page-header__wrapper{
-  background: url("resources/img/img-opt/index/mobile/hero-mobile.jpg") no-repeat bottom 130px center;
+  background: url("../resources/img/img-opt/index/mobile/hero-mobile.jpg") no-repeat bottom 130px center;
 }
 .page-header__logo{
   display: flex;
@@ -152,7 +152,7 @@ position: relative;
     margin:0 auto;
     display: grid;
     grid-template-columns: repeat(4, 167px);
-    background: url("resources/img/img-opt/index/desktop/hero-desktop.jpg") no-repeat bottom 0px center;
+    background: url("../resources/img/img-opt/index/desktop/hero-desktop.jpg") no-repeat bottom 0px center;
 
   }
   .page-header__logo{
@@ -240,7 +240,7 @@ position: relative;
 @media (min-width: 1250px) {
   .page-header{
     width: 1250px;
-    background:#f9f9f9 url("resources/img/img-opt/index/desktop/hero-desktop.jpg") no-repeat bottom 0px center;
+    background:#f9f9f9 url("../resources/img/img-opt/index/desktop/hero-desktop.jpg") no-repeat bottom 0px center;
   }
   .page-header__wrapper{
     width:1050px;
