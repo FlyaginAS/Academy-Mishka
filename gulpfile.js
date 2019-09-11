@@ -36,20 +36,21 @@ gulp.task('html', function () {
         .pipe(posthtml([
             include()
         ]))
-        .pipe(gulp.dest('build/'));
+        .pipe(gulp.dest('build'));
 });
 //CSS************************************************************************************
 gulp.task('css-min', function () {
-    return gulp.src('dev/main.scss')
+    return gulp.src('dev/sass/main.scss')
         .pipe(plumber())
         .pipe(sass())
         .pipe(postcss([
             autoprefixer()
         ]))
+        .pipe(gulp.dest('build/css'))
         .pipe(minify())
         .pipe(rename('main.min.css'))
-        .pipe(gulp.dest('build/'))
-        .pipe(server.stream());
+        .pipe(gulp.dest('build/css'));
+        // .pipe(server.stream());
 });
 
 //IMAGE-OPT***************************************************************************
@@ -83,12 +84,12 @@ gulp.task('sprite-svg', function () {
             inlineSvg: true
         }))
         .pipe(rename('sprite.svg'))
-        .pipe(gulp.dest('dev/resources/img/sprite'));
+        .pipe(gulp.dest('build/resources/img/sprite'));
 });
 
 //SPRITE PNG*******************************************************************************
 //  spritesmith = require('gulp.spritesmith');
-gulp.task('sprite', function () {
+gulp.task('sprite-png', function () {
     return gulp.src('dev/resources/img/img-opt/*.*')
         .pipe(spritesmith(
             {
@@ -108,16 +109,16 @@ gulp.task('webp', function () {
 //COPY***********************************************************************************
 gulp.task('copy', function(){
     return gulp.src([
-        "source/fonts/**/*.{woff,woff2}",
-        "source/img/**",
-        "source/js/**"
+        "dev/resources/fonts/**/*.{woff,woff2}",
+        "dev/resources/img/img-opt/**",
+        "dev/js/**"
     ], {
-        base: 'source'
+        base: 'dev'
     })
         .pipe(gulp.dest('build'));
 });
 
-//DEL****************************************************************************************
+//CLEAN****************************************************************************************
 gulp.task("clean", function () {
     return del("build");
 });
@@ -130,6 +131,15 @@ gulp.task('serve', function () {
     gulp.watch('dev/**/*.{scss, sass}', ['css-min']);
     gulp.watch('dev/*.html').on('change', server.reload);
 });
+
+//BUILD************************************************************************************
+gulp.task('build', gulp.series('clean', 'copy', 'css-min', 'sprite-svg','html'));
+
+//START***********************************************************************************
+gulp.task('start', gulp.series('build','serve'));
+
+
+
 
 
 
