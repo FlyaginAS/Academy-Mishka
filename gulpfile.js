@@ -141,19 +141,6 @@ gulp.task('build', gulp.series('clean', 'copy', 'css-min', 'sprite-svg','html'))
 gulp.task('start', gulp.series('build','serve'));
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 //JS
 gulp.task('js-min', function () {
     return gulp.src('dev/js/main.js')
@@ -162,34 +149,7 @@ gulp.task('js-min', function () {
         .pipe(rename('min.js'))
         .pipe(gulp.dest('dev'))
 });
-//BUILD
-// gulp.task('copy-html', function () {
-//     return gulp.src('dev/index.html')
-//         .pipe(gulp.dest('pub'))
-// });
-// gulp.task('copy-css', function () {
-//     return gulp.src('dev/main-min.css')
-//         .pipe(gulp.dest('pub'))
-// });
-// gulp.task('copy-js', function () {
-//     return gulp.src('dev/min.js')
-//         .pipe(gulp.dest('pub'))
-// });
-// gulp.task('copy-fonts', function () {
-//     return gulp.src('dev/resources/fonts/**/*.*')
-//         .pipe(gulp.dest('pub/resources/fonts'))
-// });
-// gulp.task('copy-pictures', function () {
-//     return gulp.src('dev/resources/img/pictures/**/*.*')
-//         .pipe(gulp.dest('pub/resources/img/pictures'))
-// });
-// gulp.task('copy-sprite', function () {
-//     return gulp.src('dev/resources/img/sprite/**/*.*')
-//         .pipe(gulp.dest('pub/resources/img/sprite'))
-// });
-// gulp.task('build', function () {
-//     return gulp.series()
-// })
+
 
 /*************************************************************************************************/
 //ОТ HTMLACADEMY
